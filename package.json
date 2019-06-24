@@ -1,0 +1,22 @@
+{
+  "name": "lsdi",
+  "version": "1.0.0",
+  "description": "LSDI project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m1ndgap/LSDI.git"
+  },
+  "author": "mg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m1ndgap/LSDI/issues"
+  },
+  "homepage": "https://github.com/m1ndgap/LSDI#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
