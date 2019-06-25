@@ -1,0 +1,39 @@
+.video
+  background: $paleblue
+  &__container
+    box-sizing: border-box
+    margin: auto
+    padding: 144px 149px
+    width: 100%
+    max-width: 1440px
+    display: flex
+  &__text-block
+    padding-top: 40px
+    margin-left: 7.5%
+    display: flex
+    flex-flow: column nowrap
+
+  &__video
+    position: relative
+    min-width: 587px
+    height: 386px
+    background: url('../img/video_placeholder.png')
+    display: flex
+    justify-content: center
+    align-items: center
+    //&__play-button
+    &::after
+      display: block
+      position: absolute
+      content: " "
+      height: 72px
+      width: 72px
+      background: $blue url('../img/play_button.svg')
+
+  &__title
+
+  &__text
+    margin-top: 24px
+    font-size: 18px
+    line-height: 32px
+    color: $grey
