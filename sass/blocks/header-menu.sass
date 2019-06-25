@@ -27,10 +27,6 @@
   &__item
     display: flex
     justify-content: center
-    &--active
-      font-weight: 500
-      border-bottom: 3px solid $blue
-      color: $black
     &--firm
       flex-basis: 4.5%
       a
@@ -72,11 +68,15 @@
         a
           border-bottom: 3px solid $blue
           color: $black
+    &--active
+      font-weight: 500
+      border-bottom: 3px solid $blue !important
+      color: $black
 
   &__login-button
     margin-top: 6px
     margin-left: 2.8%
-    cursor: pointer
+    padding-bottom: 4px
 
   &__search
     box-sizing: border-box
