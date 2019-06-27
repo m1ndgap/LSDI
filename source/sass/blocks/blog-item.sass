@@ -1,0 +1,61 @@
+.blog-item
+  box-sizing: border-box
+  max-width: 437px
+  height: 601px
+  border-radius: 11px
+  overflow: hidden
+  background: $white
+  display: flex
+  flex-flow: column
+  transition: 300ms
+  &:hover
+    box-shadow: 0px 10px 40px rgba(70, 151, 191, 0.1)
+
+  &__image
+    max-width: 100%
+    img
+      object-fit: cover
+      max-width: 100%
+      min-height: 314px
+  &__text-block
+    box-sizing: border-box
+    padding: 24px 32px 28px
+    display: flex
+    flex-flow: column nowrap
+    flex-grow: 1
+  &__date
+    font-size: 14px
+    line-height: 18px
+    color: $grey
+  &__title
+    @include resetmargin
+    margin-top: 5px
+    font-size: 20px
+    color: $black
+  &__text
+    @include resetmargin
+    margin-top: 23px
+    line-height: 28px
+    color: $grey
+  &__link
+    display: block
+    position: relative
+    align-self: flex-start
+    margin-top: auto
+    text-decoration: none
+    color: $blue
+    padding-bottom: 4px
+    border-bottom: 1px solid $blue
+    &:after
+      position: absolute
+      content: ""
+      display: block
+      width: 20px
+      height: 20px
+      background: url('../img/blue-arrow.svg') no-repeat
+      right: -32px
+      top: 28%
+      transition: 300ms
+    &:hover
+      &:after
+        right: -35px

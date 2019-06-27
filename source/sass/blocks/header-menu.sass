@@ -37,6 +37,8 @@
       flex-basis: 9.3%
     &--ssolutions
       flex-basis: 12.5%
+      @include media('<huge')
+        flex-basis: 16.5%
     &--esolutions
       flex-basis: 13.5%
       @include media('<huge')
@@ -60,6 +62,8 @@
         left: -1px
         @include media('<huge')
           left: -14px
+      @include media('<huge')
+        margin-left: 20px
     &--firm, &--services, &--ssolutions, &--esolutions
       a
         transition: 300ms
