@@ -18,6 +18,33 @@ $( document ).ready(function() {
       tNext: 'Next (Right arrow key)', // title for right button
       tCounter: '<span class="mfp-counter"></span>' // markup of counter
   }
-});
+  });
+
+  // $('.js-label-morph').on(
+  //   {focus: function() {
+  //     $(this).siblings().each(function(){
+  //       if ($(this).hasClass('form__label')) {
+  //         $(this).addClass('label-shrink');
+  //       }
+  //     })
+  //   },
+  //   {focusout: function(){
+  //
+  // }}
+  // });
+
+  $(".js-label-morph").on({
+    focus: function() {
+      $(this).siblings('.form__label').addClass('label-shrink');
+      },
+    focusout: function() {
+      if ($(this).val() != ""){
+        console.log(12312313);
+      } else {
+        $(this).siblings('.form__label').removeClass('label-shrink');
+      }
+    }
+  });
+
 
 });
