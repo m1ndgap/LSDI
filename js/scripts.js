@@ -7,6 +7,8 @@ $( document ).ready(function() {
   //   dots: true,
   // });
 
+  $('#clients_tabs').tabs();
+
   $('#js-index-gallery a').magnificPopup({
     type: 'image',
     gallery: {
@@ -19,19 +21,6 @@ $( document ).ready(function() {
       tCounter: '<span class="mfp-counter"></span>' // markup of counter
   }
   });
-
-  // $('.js-label-morph').on(
-  //   {focus: function() {
-  //     $(this).siblings().each(function(){
-  //       if ($(this).hasClass('form__label')) {
-  //         $(this).addClass('label-shrink');
-  //       }
-  //     })
-  //   },
-  //   {focusout: function(){
-  //
-  // }}
-  // });
 
   $(".js-label-morph").on({
     focus: function() {
