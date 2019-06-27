@@ -1,0 +1,36 @@
+.gallery
+  width: 100%
+  background: $white
+
+  &__container
+    @include container
+    display: flex
+    flex-flow: column nowrap
+    align-items: center
+
+  &__title
+    margin-top: 141px
+
+  &__images
+    width: 100%
+    box-sizing: border-box
+    padding: 0 32px 0
+    margin-top: 76px
+    column-count: 4
+    column-gap: 3%
+    line-height: 0
+
+  &__image
+    display: block
+    margin-bottom: 32px
+    max-width: 320px
+    width: 100%
+    max-height: 400px
+    border-radius: 12px
+    overflow: hidden
+    img
+      max-width: 100%
+      object-fit: fill
+
+  &__blue-button
+    margin-top: 80px
