@@ -1,0 +1,52 @@
+.form
+  background: $paleblue
+
+  &__text-block, &__wrapper
+    max-width: 672px
+    width: 57%
+
+  &__image
+    margin-left: -23px
+    margin-top: 11px
+
+  &__container
+    @include container
+    padding: 135px 102px 0px 151px
+    max-height: 750px
+    display: flex
+    flex-flow: column wrap
+
+  &__title
+    @include resetmargin
+  &__text
+    max-width: 530px
+    margin-top: 34px
+    font-size: 18px
+    color: $grey
+    line-height: 180%
+
+  &__form
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+  &__name-wrapper
+    flex-basis: 47%
+    display: flex
+    flex-flow: column nowrap
+  &__email-wrapper
+    flex-basis: 47%
+    display: flex
+    flex-flow: column nowrap
+  &__info-wrapper
+    flex-basis: 100%
+    display: flex
+    flex-flow: column nowrap
+  &__file-wrapper
+    flex-basis: 47%
+    display: flex
+    flex-flow: column nowrap
+  &__submit
+    flex-basis: 100%
+    display: flex
+    justify-content: center
+    text-align: center
