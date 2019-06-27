@@ -114,54 +114,93 @@
     <div class="clients">
       <div class="clients__container">
         <div class="clients__text-block">
-          <h2 class="clients__title">Clients</h2>
-          <h2 class="header-40">Over 1000+ completed work & still counting.</h2>
+          <h2 class="clients__blue-title">Clients</h2>
+          <h2 class="clients__title heading-40">Over 1000+ completed work & still counting.</h2>
           <p class="clients__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
           </p>
         </div>
         <div class="clients__tabs" id='clients_tabs'>
-          <ul class="pc-info-tabs">
-            <li class='active'><a href="#fragment-1">
-              <svg></svg>
-              <span>Construction</span>
+          <ul class="clients__tabs-heads">
+            <li class="clients__tab-head"><a class="clients__tab-head-link" href="#fragment-1">
+              <div class="clients__tab-head-image">
+                <img src="./img/clients-house.svg" alt="little house">
+              </div>
+              <span class="clients__tab-head-text">Construction</span>
             </a></li>
-            <li><a href="#fragment-2">
-              <svg></svg>
-              <span>Government</span>
+            <li class="clients__tab-head active"><a class="clients__tab-head-link" href="#fragment-2">
+              <div class="clients__tab-head-image">
+                <img src="./img/clients-castle.svg" alt="little castle">
+              </div>
+              <span class="clients__tab-head-text">Government</span>
             </a></li>
-            <li><a href="#fragment-3">
-              <svg></svg>
-              <span>Small businesses</span>
+            <li class="clients__tab-head"><a class="clients__tab-head-link" href="#fragment-3">
+              <div class="clients__tab-head-image">
+                <img src="./img/clients-truck.svg" alt="little truck">
+              </div>
+              <span class="clients__tab-head-text">Small businesses</span>
             </a></li>
-            <li><a href="#fragment-4">
-              <svg></svg>
-              <span>Hospitality</span>
+            <li class="clients__tab-head"><a class="clients__tab-head-link" href="#fragment-4">
+              <div class="clients__tab-head-image">
+                <img src="./img/clients-hospitality.svg" alt="little bell">
+              </div>
+              <span class="clients__tab-head-text">Hospitality</span>
             </a></li>
-          </ul>
-            <div id='fragment-1' class="">
+          </ul class="clients__tabs-content">
+            <div id='fragment-1' class="clients__tab-content">
+              <img src="./img/client_1.png">
+              <img src="./img/client_2.png">
+              <img src="./img/client_3.png">
+              <img src="./img/client_4.png">
+              <img src="./img/client_5.png">
+              <img src="./img/client_2.png">
+              <img src="./img/client_4.png">
+              <img src="./img/client_1.png">
+            </div>
+            <div id='fragment-2' class="clients__tab-content">
+              <img src="./img/client_5.png">
+              <img src="./img/client_1.png">
+              <img src="./img/client_3.png">
+              <img src="./img/client_4.png">
+              <img src="./img/client_2.png">
+              <img src="./img/client_1.png">
+              <img src="./img/client_3.png">
+              <img src="./img/client_4.png">
 
             </div>
-            <div id='fragment-2' class="">
-
+            <div id='fragment-3' class="clients__tab-content">
+              <img src="./img/client_4.png">
+              <img src="./img/client_2.png">
+              <img src="./img/client_1.png">
+              <img src="./img/client_3.png">
+              <img src="./img/client_4.png">
+              <img src="./img/client_5.png">
+              <img src="./img/client_1.png">
+              <img src="./img/client_3.png">
             </div>
-            <div id='fragment-3' class="">
+            <div id='fragment-4' class="clients__tab-content">
 
+              <img src="./img/client_4.png">
+              <img src="./img/client_1.png">
+              <img src="./img/client_4.png">
+              <img src="./img/client_2.png">
+              <img src="./img/client_1.png">
+              <img src="./img/client_3.png">
+              <img src="./img/client_5.png">
             </div>
-            <div id='fragment-4' class="">
-
-            </div>
-            <ul class="pc-info-tabs-mobile">
-              <li class="pc-info-tabs-mobile-title">
+            <ul class="clients__tabs-mobile">
+              <li class="clients__tabs-mobile-title">
                 <a><span></span></a>
-                <div class="pc-collapse-arrow"></div>
+                <div class="clients__collapse-arrow"></div>
               </li>
-              <li class="pc-info-tabs-mobile-content">
+              <li class="clients__tabs-mobile-content">
 
               </li>
-              <li class="pc-info-tabs-mobile-title">
-                <a><span></span></a><div class="pc-collapse-arrow"></div></li>
-              <li class="pc-info-tabs-mobile-content">
+              <li class="clients__tabs-mobile-title">
+                <a><span></span></a>
+                <div class="clients__collapse-arrow"></div>
+              </li>
+              <li class="clients__tabs-mobile-content">
 
               </li>
             </ul>
@@ -331,18 +370,18 @@
             <form action="" class="footer__newsletter-form">
               <label for="footer-email" class="footer__newsletter-title">Subscribe to our newSletter</label>
               <div class="footer__newsletter-email-block">
-                <input type="email" name='footer-email' class="footer__newsletter-email">
-                <input type="submit" class="footer__newsletter-submit">
+                <input type="email" placeholder="Email" name='footer-email' class="footer__newsletter-email">
+                <input type="submit" value='' class="footer__newsletter-submit">
               </div>
             </form>
           </div>
         </div>
         <div class="footer__social">
           <a href="" class="footer__social-link">
-            <svg class="footer__social-image"></svg>
+            <img src="./img/facebook.svg" class="footer__social-image"></img>
           </a>
           <a href="" class="footer__social-image">
-            <svg></svg>
+            <img src="./img/pinterest.svg" class="footer__social-image"></img>
           </a>
         </div>
       </div>
