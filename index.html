@@ -266,23 +266,31 @@
         <div class="form__wrapper">
           <form action="" class="form__form">
             <div class="form__name-wrapper">
-              <label for="fname">Full name</label>
-              <input type="text" name='fname' class="form__name">
+              <label class="form__label" for="fname">Full name</label>
+              <input type="text" name='fname' class="form__name js-label-morph">
             </div>
             <div class="form__email-wrapper">
-              <label for="email">Email</label>
-              <input type="text" name="email" class="form__email">
+              <label class="form__label label-shrink" for="email">Email</label>
+              <input type="text" name="email" class="form__email js-label-morph" value='webzavod@gmail.com'>
             </div>
             <div class="form__info-wrapper">
-              <label for="info">Scope of work / Budget / Timeline / Location</label>
-              <textarea name="info" id="" cols="30" rows="10" class="form__info"></textarea>
+              <label class="form__label form__label--info" for="info">Scope of work / Budget / Timeline / Location</label>
+              <textarea name="info" id="" cols="30" rows="3" class="form__info js-label-morph"></textarea>
             </div>
             <div class="form__file-wrapper">
-              <label for="file">Attach file</label>
+              <label class="form__file-label form__file-label--uploaded" for="file">
+                <img class="upload-icon" src="./img/upload_icon.svg" alt="">
+                <span>Attached_file.svg</span>
+                <img class="upload-cancel-icon" src="./img/upload_cancel.svg" alt="">
+              </label>
               <input type="file" name="file" class="form__file">
             </div>
             <div class="form__file-wrapper">
-              <label for="file">Attach file</label>
+              <label class="form__file-label" for="file">
+                <img class="upload-icon" src="./img/upload_icon.svg" alt="">
+                <span>Attach file</span>
+                <img class="upload-cancel-icon" src="./img/upload_cancel.svg" alt="">
+              </label>
               <input type="file" name="file" class="form__file">
             </div>
             <input type="text" value='Send' class="form__submit blue-button">

@@ -1,5 +1,5 @@
 .form
-  background: $paleblue
+  background: linear-gradient(180deg ,$paleblue 30%,$white 100%)
 
   &__text-block, &__wrapper
     max-width: 672px
@@ -8,6 +8,14 @@
   &__image
     margin-left: -23px
     margin-top: 11px
+
+    @include media('<huge')
+      width: 40%
+      margin-left: -123px
+      margin-top: 111px
+      img
+        width: 100%
+
 
   &__container
     @include container
@@ -26,26 +34,114 @@
     line-height: 180%
 
   &__form
+    margin-top: 67px
     display: flex
     flex-flow: row wrap
     justify-content: space-between
-  &__name-wrapper
-    flex-basis: 47%
+    align-items: flex-start
+
+  input[type='text'], textarea[name="info"]
+    &:focus
+      outline: none
+      border-bottom: 2px solid $blue
+
+
+  &__name-wrapper, &__email-wrapper
+    position: relative
+    flex-basis: 47.5%
     display: flex
     flex-flow: column nowrap
-  &__email-wrapper
-    flex-basis: 47%
-    display: flex
-    flex-flow: column nowrap
+  &__label
+    color: $grey
+    position: absolute
+    top: 3px
+    left: 0px
+    pointer-events: none
+    font-size: 16px
+    transition: 300ms
+    &--info
+      top: 41px
+
+
+  .label-shrink
+    font-size: 12px
+    top: -13px
+    left: 0px
+
+  &__name, &__email
+    box-sizing: border-box
+    padding: 3px 0px 18px 0px
+    font-size: 17px
+    background: none
+    border: 0
+    border-bottom: 2px solid $grey
+    transition: 300ms
+
   &__info-wrapper
+    position: relative
+    margin-top: 40px
     flex-basis: 100%
     display: flex
     flex-flow: column nowrap
+  &__info
+    padding: 8px 0px 14px 0px
+    font-size: 17px
+    background: none
+    border: 0
+    border-bottom: 2px solid $grey
   &__file-wrapper
-    flex-basis: 47%
+    margin-top: 39px
+    flex-basis: 47.5%
     display: flex
     flex-flow: column nowrap
+    position: relative
+    cursor: pointer
+    &:hover
+      .form__file-label
+        color: $black
+  &__file
+    position: absolute
+    width: 100%
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    opacity: 0
+  &__file-label
+    display: flex
+    align-items: center
+    border: 1px dashed $grey
+    padding: 19px
+    padding-bottom: 22px
+    border-radius: 4px
+    color: $grey
+    transition: 300ms
+    span
+      display: inline-block
+      height: 17px
+    .upload-icon
+      position: relative
+      top: 1px
+      height: 15px
+      margin-right: 13px
+    .upload-cancel-icon
+      display: none
+    &--uploaded
+      background: $paleblue
+      border: 1px solid $blue
+      color: $black
+      .upload-icon
+        display: none
+      .upload-cancel-icon
+        margin-left: auto
+        display: inline-block
+        z-index: 5
+        cursor: pointer
+
+
   &__submit
+    margin-top: 43px
+    padding: 8px
     flex-basis: 100%
     display: flex
     justify-content: center
