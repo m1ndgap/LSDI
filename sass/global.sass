@@ -26,7 +26,10 @@ body
     background: $paleblue
 
 .blue-button
-  background: linear-gradient(90deg, $lblue 0%, $blue 100%)
+  background: linear-gradient(90deg, $lblue 35%, $blue 60%)
+  background-repeat: no-repeat
+  background-size: 500px
+  background-position: center
   border: none
   border-radius: 5px
   font-size: 15px
@@ -37,7 +40,7 @@ body
   cursor: pointer
   transition: 300ms
   &:hover
-    background: linear-gradient(90deg, $lblue 0%, $blue 1%)
+    background-position: -200px
 
 .heading-48, .heading-40, .heading-36
   color: $black
