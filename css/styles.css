@@ -41,7 +41,7 @@ body {
 .blue-button {
   background: linear-gradient(90deg, #74D5FF 35%, #00AAE5 60%);
   background-repeat: no-repeat;
-  background-size: 500px;
+  background-size: 300%;
   background-position: center;
   border: none;
   border-radius: 5px;
@@ -53,7 +53,7 @@ body {
   cursor: pointer;
   transition: 300ms; }
   .blue-button:hover {
-    background-position: -200px; }
+    background-position: 90%; }
 
 .heading-48, .heading-40, .heading-36 {
   color: #3A3A3A;
@@ -204,7 +204,11 @@ body {
     display: flex;
     height: 112px;
     border: 1px solid #D9E7EE;
-    border-radius: 5px; }
+    border-radius: 5px;
+    box-shadow: 0 0 0 transparent;
+    transition: 300ms; }
+    .clients__tabs-heads:focus, .clients__tabs-heads:active {
+      outline: none !important; }
   .clients__tab-head {
     flex-basis: 25%;
     border-right: 1px solid #D9E7EE;
@@ -245,10 +249,12 @@ body {
       margin-bottom: 30px; }
   .clients__tabs-mobile {
     display: none; }
-
-.ui-state-active {
-  outline: none;
-  box-shadow: 0px 10px 40px rgba(70, 151, 191, 0.2); }
+  .clients .ui-state-active {
+    transition: 300ms;
+    outline: none;
+    box-shadow: 0px 10px 40px rgba(70, 151, 191, 0.2); }
+  .clients .ui-tabs-tab:focus, .clients .ui-tabs-tab:active, .clients .ui-corner-top:focus, .clients .ui-corner-top:active, .clients .ui-state-default:focus, .clients .ui-state-default:active, .clients .ui-state-focus:focus, .clients .ui-state-focus:active, .clients .ui-tab:focus, .clients .ui-tab:active, .clients .ui-tabs-active:focus, .clients .ui-tabs-active:active, .clients .ui-state-active:focus, .clients .ui-state-active:active, .clients .ui-tabs-anchor:focus, .clients .ui-tabs-anchor:active {
+    outline: none !important; }
 
 .footer__upper-block {
   box-sizing: border-box;

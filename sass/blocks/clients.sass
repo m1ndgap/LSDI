@@ -42,6 +42,10 @@
     height: 112px
     border: 1px solid $palegrey
     border-radius: 5px
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+    transition: 300ms
+    &:focus, &:active
+      outline: none !important
 
   &__tab-head
     flex-basis: 25%
@@ -89,6 +93,11 @@
   &__tabs-mobile
     display: none
 
-.ui-state-active
-  outline: none
-  box-shadow: 0px 10px 40px rgba(70, 151, 191, 0.2)
+  .ui-state-active
+    transition: 300ms
+    outline: none
+    box-shadow: 0px 10px 40px rgba(70, 151, 191, 0.2)
+
+  .ui-tabs-tab, .ui-corner-top, .ui-state-default, .ui-state-focus, .ui-tab, .ui-tabs-active, .ui-state-active, .ui-tabs-anchor
+    &:focus, &:active
+      outline: none !important
