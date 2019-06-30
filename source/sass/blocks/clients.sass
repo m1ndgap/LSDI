@@ -53,6 +53,9 @@
     display: flex
     &:nth-child(4)
       border: none
+    &:hover
+      .clients__tab-head-svg
+        fill: $svg-red
 
   &__tab-head-link
     flex-basis: 100%
@@ -70,6 +73,10 @@
     display: flex
     justify-content: center
     align-items: center
+
+  &__tab-head-svg
+    fill: $blue
+    transition: 300ms
 
   &__tab-head-text
     font-size: 16px
@@ -97,6 +104,8 @@
     transition: 300ms
     outline: none
     box-shadow: 0px 10px 40px rgba(70, 151, 191, 0.2)
+    .clients__tab-head-svg
+      fill: $svg-red
 
   .ui-tabs-tab, .ui-corner-top, .ui-state-default, .ui-state-focus, .ui-tab, .ui-tabs-active, .ui-state-active, .ui-tabs-anchor
     &:focus, &:active
