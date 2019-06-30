@@ -215,6 +215,8 @@ body {
     display: flex; }
     .clients__tab-head:nth-child(4) {
       border: none; }
+    .clients__tab-head:hover .clients__tab-head-svg {
+      fill: #FF3A53; }
   .clients__tab-head-link {
     flex-basis: 100%;
     display: flex;
@@ -230,6 +232,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+  .clients__tab-head-svg {
+    fill: #00AAE5;
+    transition: 300ms; }
   .clients__tab-head-text {
     font-size: 16px;
     font-weight: 500;
@@ -253,6 +258,8 @@ body {
     transition: 300ms;
     outline: none;
     box-shadow: 0px 10px 40px rgba(70, 151, 191, 0.2); }
+    .clients .ui-state-active .clients__tab-head-svg {
+      fill: #FF3A53; }
   .clients .ui-tabs-tab:focus, .clients .ui-tabs-tab:active, .clients .ui-corner-top:focus, .clients .ui-corner-top:active, .clients .ui-state-default:focus, .clients .ui-state-default:active, .clients .ui-state-focus:focus, .clients .ui-state-focus:active, .clients .ui-tab:focus, .clients .ui-tab:active, .clients .ui-tabs-active:focus, .clients .ui-tabs-active:active, .clients .ui-state-active:focus, .clients .ui-state-active:active, .clients .ui-tabs-anchor:focus, .clients .ui-tabs-anchor:active {
     outline: none !important; }
 
