@@ -468,7 +468,7 @@ body {
     border: 0;
     border-bottom: 1px solid #D9E7EE; }
   .form__file-wrapper {
-    margin-top: 39px;
+    margin-top: 41px;
     flex-basis: 47.5%;
     display: flex;
     flex-flow: column nowrap;
@@ -490,8 +490,7 @@ body {
     display: flex;
     align-items: center;
     border: 4px dashed #D9E7EE;
-    padding: 19px;
-    padding-bottom: 22px;
+    padding: 15px 15px 20px;
     border-radius: 4px;
     color: #8491A6;
     transition: 300ms;
@@ -532,7 +531,7 @@ body {
         z-index: 5;
         cursor: pointer; }
   .form__submit {
-    margin-top: 43px;
+    margin-top: 40px;
     height: 60px;
     padding: 8px;
     flex-basis: 100%;
