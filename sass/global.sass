@@ -41,6 +41,11 @@ body
   transition: 300ms
   &:hover
     background-position: 90%
+  &:active
+    background-position: center
+  &:active, &:focus
+    outline: none
+
 
 .heading-48, .heading-40, .heading-36
   @include resetmargin
