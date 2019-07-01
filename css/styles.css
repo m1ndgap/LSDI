@@ -429,7 +429,7 @@ body {
       top: 41px; }
   .form .label-shrink {
     font-size: 12px;
-    top: -13px;
+    top: -15px;
     left: 0px; }
   .form__name, .form__email {
     box-sizing: border-box;
@@ -437,7 +437,7 @@ body {
     font-size: 17px;
     background: none;
     border: 0;
-    border-bottom: 2px solid #8491A6;
+    border-bottom: 1px solid #D9E7EE;
     transition: 300ms; }
   .form__info-wrapper {
     position: relative;
@@ -450,7 +450,7 @@ body {
     font-size: 17px;
     background: none;
     border: 0;
-    border-bottom: 2px solid #8491A6; }
+    border-bottom: 1px solid #D9E7EE; }
   .form__file-wrapper {
     margin-top: 39px;
     flex-basis: 47.5%;
