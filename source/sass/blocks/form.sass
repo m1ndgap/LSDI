@@ -110,28 +110,45 @@
     bottom: 0
     opacity: 0
   &__file-label
+    position: relative
+    box-sizing: content-box
     display: flex
     align-items: center
-    border: 1px dashed $grey
+    border: 4px dashed $palegrey
     padding: 19px
     padding-bottom: 22px
     border-radius: 4px
     color: $grey
     transition: 300ms
+    z-index: 1
+    &:after
+      content: ""
+      position: absolute
+      top: -3px
+      left: -3px
+      right: -3px
+      bottom: -3px
+      background-color: $white
+      border-radius: 3px
+      z-index: 2
     span
       display: inline-block
       height: 17px
+      z-index: 3
     .upload-icon
       position: relative
       top: 1px
       height: 15px
       margin-right: 13px
+      z-index: 3
     .upload-cancel-icon
       display: none
     &--uploaded
       background: $paleblue
-      border: 1px solid $blue
+      border: 4px solid $blue
       color: $black
+      &:after
+        background: $paleblue
       .upload-icon
         display: none
       .upload-cancel-icon
