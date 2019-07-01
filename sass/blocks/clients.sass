@@ -21,7 +21,7 @@
   &__title
     @include resetmargin
     margin-top: 16px
-    letter-spacing: -0.5px
+    letter-spacing: 0px
 
   &__text
     @include resetmargin
@@ -54,8 +54,8 @@
     &:nth-child(4)
       border: none
     &:hover
-      .clients__tab-head-svg
-        fill: $svg-red
+      .clients__tab-head-image
+        border: 1px solid $blue
 
   &__tab-head-link
     flex-basis: 100%
@@ -73,6 +73,7 @@
     display: flex
     justify-content: center
     align-items: center
+    transition: 300ms
 
   &__tab-head-svg
     fill: $blue
@@ -90,7 +91,7 @@
     display: flex
     flex-flow: row wrap
     justify-content: center
-    padding: 80px 20px 50px 20px
+    padding: 80px 20px 122px 20px
     img
       object-fit: scale-down
       display: block
@@ -104,8 +105,8 @@
     transition: 300ms
     outline: none
     box-shadow: 0px 10px 40px rgba(70, 151, 191, 0.2)
-    .clients__tab-head-svg
-      fill: $svg-red
+    .clients__tab-head-image
+      border: 1px solid $blue
 
   .ui-tabs-tab, .ui-corner-top, .ui-state-default, .ui-state-focus, .ui-tab, .ui-tabs-active, .ui-state-active, .ui-tabs-anchor
     &:focus, &:active

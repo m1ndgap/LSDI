@@ -43,6 +43,7 @@ body
     background-position: 90%
 
 .heading-48, .heading-40, .heading-36
+  @include resetmargin
   color: $black
   font-weight: bold
   letter-spacing: -0.5px
@@ -57,3 +58,9 @@ body
 
 .heading-36
   font-size: 36px
+
+.grey-text
+  @include resetmargin
+  font-size: 18px
+  line-height: 32px
+  color: $grey
