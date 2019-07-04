@@ -1,36 +1,90 @@
 .index-slider
   width: 100%
 
+  &__swiper-wrapper
+    //overflow: hidden
+  .swiper-pagination
+    bottom: 54px
+    .swiper-pagination-bullet
+      width: 12px
+      height: 12px
+      margin: 0 8px
+      background: $paleblue
+    .swiper-pagination-bullet
+      background: $blue
+
   &__container
     @include container
     box-sizing: border-box
     width: 100%
-    padding: 137px 76px 211px 149px
+    //padding: 137px 78px 211px 149px
+    padding: 97px 10px 0
   &__slide
-    max-height: 430px
+    height: 666px
+    width: 100%
+    padding: 40px 140px 200px
+    box-sizing: border-box
     display: flex
     flex-flow: column wrap
   &__text-heading, &__text, &__buttons
     max-width: 470px
+  &__text-heading
+    letter-spacing: -1.5px
+    &--slide-4
+      margin-top: -48px
+    &--slide-5
+      max-width: 425px
   &__text
     margin-top: 38px
     font-size: 18px
     line-height: 32px
     color: $grey
+    &--slide-2
+      max-width: 430px
+    &--slide-3
+      max-width: 345px
+    &--slide-4
+      max-width: 438px
+      margin-top: 25px
+    &--slide-5
+      max-width: 490px
+
   &__svg
     display: block
-    height: 472px
-    width: 631px
-    background: $blue
+    @include media('<huge')
+
+    &--slide-1
+      margin-top: -36px
+      margin-left: 10%
+      @include media('<huge')
+        width: 50%
+        margin-left: 5%
+        margin-top: auto
+        margin-bottom: auto
+    &--slide-2
+      margin-top: -34px
+      margin-left: 47px
+    &--slide-3
+      margin-right: -106px
+      margin-top: -31px
+    &--slide-4
+      margin-left: 20px
+      margin-top: -4px
+    &--slide-5
+      margin-top: 37px
+      margin-left: 128px
   &__buttons
-    margin-top: 45px
+    margin-top: auto
     display: flex
     align-items: center
   &__blue-button
-    height: 60px
-    padding: 0 56px 0
+    height: auto
+    font-size: 16px
+    padding: 21px 53px 21px
     letter-spacing: 0.5px
   &__arrow
+    //hiding arrows for now
+    display: none
     background: none
     border: none
     cursor: pointer

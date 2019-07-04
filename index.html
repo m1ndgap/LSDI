@@ -12,6 +12,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.css"/> -->
     <!-- Add the slick-theme.css if you want default styling -->
     <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"/> -->
+    <link rel="stylesheet" href="./css/swiper.min.css">
     <link rel="stylesheet" href="./css/magnific-popup.css">
     <link rel="stylesheet" href="./css/styles.css">
 
@@ -33,7 +34,6 @@
       <svg id='clients-truck'>
         <path d="M24.0001 13.3C23.4001 8.8 22.5001 4.4 18.8001 0.5C18.5001 0.2 18.1001 0 17.7001 0H1.70008C0.900081 0 0.200081 0.6 0.200081 1.4C8.12858e-05 5.8 -0.0999187 10.8 0.200081 15C0.200081 17.2 2.00008 19 4.20008 19C6.40008 19 8.20008 17.2 8.20008 15H14.1001C14.1001 17.2 15.9001 19 18.1001 19C20.3001 19 22.1001 17.2 22.1001 15H22.5001C23.4001 15 24.1001 14.2 24.0001 13.3ZM4.10008 17C3.00008 17 2.10008 16.1 2.10008 15C2.10008 13.9 3.00008 13 4.10008 13C5.20008 13 6.10008 13.9 6.10008 15C6.10008 16.1 5.20008 17 4.10008 17ZM13.3001 6V2H16.8001C17.1001 2 17.4001 2.1 17.6001 2.4C18.4001 3.4 19.0001 4.4 19.6001 5.5C20.0001 6.2 19.5001 7 18.7001 7H14.3001C13.8001 7 13.3001 6.6 13.3001 6ZM18.0001 17C16.9001 17 16.0001 16.1 16.0001 15C16.0001 13.9 16.9001 13 18.0001 13C19.1001 13 20.0001 13.9 20.0001 15C20.0001 16.1 19.1001 17 18.0001 17Z"/>
       </svg>
-
     </svg>
     <div class="header">
       <div class="header-menu">
@@ -69,58 +69,115 @@
         <button class="white-button header-menu__login-button">Login</button>
       </div>
     </div>
+    <!-- <div class="swiper-container">
+
+      <div class="swiper-wrapper">
+
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          ...
+      </div>
+
+
+
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div> -->
     <div class="index-slider">
-      <div class="index-slider__container" id='js-index-slick-slider'>
-        <div class="index-slider__slide">
-          <div class="heading-48 index-slider__text-heading">Productivity Comes from Organization</div>
-          <div class="index-slider__text">Large work environments require well-planned and well-implemented wayfinding solutions.  LSDI has a long-standing reputation for helping clients tackle their navigation challenges resulting in higher productivity and a streamlined employee and visitor experience.</div>
-          <div class="index-slider__buttons">
-            <button class="index-slider__blue-button blue-button">Call to Action</button>
-            <button class="index-slider__arrow index-slider__arrow--left">
-              <img src="./img/arrow_left.svg" alt="">
-            </button>
-            <button class="index-slider__arrow index-slider__arrow--right">
-              <img src="./img/arrow_right.svg" alt="">
-            </button>
+      <div class="index-slider__container">
+      <div class="swiper-container" id='js-index-slick-slider'>
+        <div class="index-slider__swiper-wrapper swiper-wrapper">
+          <div class="index-slider__slide swiper-slide">
+            <div class="heading-48 index-slider__text-heading">Productivity Comes from Organization</div>
+            <div class="index-slider__text">Large work environments require well-planned and well-implemented wayfinding solutions.  LSDI has a long-standing reputation for helping clients tackle their navigation challenges resulting in higher productivity and a streamlined employee and visitor experience.</div>
+            <div class="index-slider__buttons">
+              <button class="index-slider__blue-button blue-button">Call to Action</button>
+              <button class="index-slider__arrow index-slider__arrow--left">
+                <img src="./img/arrow_left.svg" alt="">
+              </button>
+              <button class="index-slider__arrow index-slider__arrow--right">
+                <img src="./img/arrow_right.svg" alt="">
+              </button>
+            </div>
+            <img src="./img/slide_1_img.svg" class="index-slider__svg index-slider__svg--slide-1">
           </div>
-          <svg class="index-slider__svg"></svg>
-        </div>
-        <!-- <div class="index-slider__slide">
-          <div class="heading-48 index-slider__text-heading">Productivity Comes from Organization</div>
-          <div class="index-slider__text">Large work environments require well-planned and well-implemented wayfinding solutions.  LSDI has a long-standing reputation for helping clients tackle their navigation challenges resulting in higher productivity and a streamlined employee and visitor experience.</div>
-          <div class="index-slider__buttons">
-            <button class="index-slider__blue-button blue-button">Call to Action</button>
-            <button class="index-slider__arrow index-slider__arrow--left">
-              <img src="./img/arrow_left.svg" alt="">
-            </button>
-            <button class="index-slider__arrow index-slider__arrow--right">
-              <img src="./img/arrow_right.svg" alt="">
-            </button>
+          <div class="index-slider__slide swiper-slide">
+            <div class="heading-48 index-slider__text-heading">Your Business, Visualized</div>
+            <div class="index-slider__text index-slider__text--slide-2">Our team is committed to visual expertise. We strive to help businesses express themselves. Within a social media driven world – <br> distinction is the key to standing out.</div>
+            <div class="index-slider__buttons">
+              <button class="index-slider__blue-button blue-button">Call to Action</button>
+              <button class="index-slider__arrow index-slider__arrow--left">
+                <img src="./img/arrow_left.svg" alt="">
+              </button>
+              <button class="index-slider__arrow index-slider__arrow--right">
+                <img src="./img/arrow_right.svg" alt="">
+              </button>
+            </div>
+            <img src="./img/slide_2_img.svg" class="index-slider__svg index-slider__svg--slide-2">
           </div>
-          <svg class="index-slider__svg"></svg>
-        </div>
-        <div class="index-slider__slide">
-          <div class="heading-48 index-slider__text-heading">Productivity Comes from Organization</div>
-          <div class="index-slider__text">Large work environments require well-planned and well-implemented wayfinding solutions.  LSDI has a long-standing reputation for helping clients tackle their navigation challenges resulting in higher productivity and a streamlined employee and visitor experience.</div>
-          <div class="index-slider__buttons">
-            <button class="index-slider__blue-button blue-button">Call to Action</button>
-            <button class="index-slider__arrow index-slider__arrow--left">
-              <img src="./img/arrow_left.svg" alt="">
-            </button>
-            <button class="index-slider__arrow index-slider__arrow--right">
-              <img src="./img/arrow_right.svg" alt="">
-            </button>
+          <div class="index-slider__slide swiper-slide">
+            <div class="heading-48 index-slider__text-heading">A picture is worth a thousand words</div>
+            <div class="index-slider__text index-slider__text--slide-3">LSDI’s customized exhibit <br> solutions will tell your story. No doubt, our most complex and exhaustive visual design solution, but one that we truly get excited about, as we are artists at heart.</div>
+            <div class="index-slider__buttons">
+              <button class="index-slider__blue-button blue-button">Call to Action</button>
+              <button class="index-slider__arrow index-slider__arrow--left">
+                <img src="./img/arrow_left.svg" alt="">
+              </button>
+              <button class="index-slider__arrow index-slider__arrow--right">
+                <img src="./img/arrow_right.svg" alt="">
+              </button>
+            </div>
+            <img src="./img/slide_3_img.svg" class="index-slider__svg index-slider__svg--slide-3">
           </div>
-          <svg class="index-slider__svg"></svg>
+          <div class="index-slider__slide swiper-slide">
+            <div class="heading-48 index-slider__text-heading index-slider__text-heading--slide-4">Enable your existing Business’ Assets to Yield Higher ROI</div>
+            <div class="index-slider__text index-slider__text--slide-4">LSDI can will design, fabricate, and install visual graphic solutions on your mobile assets. Additionally, your static work and training environments should also be customiz ed to your suit you audience and maximize engagement.</div>
+            <div class="index-slider__buttons">
+              <button class="index-slider__blue-button blue-button">Call to Action</button>
+              <button class="index-slider__arrow index-slider__arrow--left">
+                <img src="./img/arrow_left.svg" alt="">
+              </button>
+              <button class="index-slider__arrow index-slider__arrow--right">
+                <img src="./img/arrow_right.svg" alt="">
+              </button>
+            </div>
+            <img src="./img/slide_4_img.svg" class="index-slider__svg index-slider__svg--slide-4">
+          </div>
+          <div class="index-slider__slide swiper-slide">
+            <div class="heading-48 index-slider__text-heading index-slider__text-heading--slide-5">Business is Built on Partnerships</div>
+            <div class="index-slider__text index-slider__text--slide-5">We recognize the vest amount of options of visual signage solutions that exisit in the marketplace today.  Let LSDI be your partner; we can assist your graphics and sign business when a project demands technologies and skills that might not be your specialty. </div>
+            <div class="index-slider__buttons">
+              <button class="index-slider__blue-button blue-button">Call to Action</button>
+              <button class="index-slider__arrow index-slider__arrow--left">
+                <img src="./img/arrow_left.svg" alt="">
+              </button>
+              <button class="index-slider__arrow index-slider__arrow--right">
+                <img src="./img/arrow_right.svg" alt="">
+              </button>
+            </div>
+            <img src="./img/slide_5_img.svg" class="index-slider__svg index-slider__svg--slide-5">
+          </div>
         </div>
-      </div> -->
+        <div class="swiper-pagination"></div>
+      </div>
+      </div>
     </div>
     </div>
     <div class="video">
       <div class="video__container">
-        <iframe src="" frameborder="0" class="video__video">
-          <button class="video__play-button"></button>
-        </iframe>
+        <div class="video__wrapper">
+        <iframe class="video__video"
+          src="https://player.vimeo.com/video/8014946?title=0&byline=0&portrait=0&controls=0"
+          frameborder="0"
+          color="#00AAE5"
+          allow="autoplay; fullscreen"
+          controls="0"
+          allowfullscreen>
+
+          </iframe>
+        </div>
         <div class="video__text-block">
           <div class="heading-40 video__title">The visual layer for your digital business</div>
           <div class="video__text">Large work environments require well-planned and well-implemented wayfinding solutions.  LSDI has a long-standing reputation for helping clients tackle their navigation challenges resulting in higher productivity and a streamlined employee and visitor experience.</div>
@@ -333,15 +390,24 @@
         </div>
         <div class="form__wrapper">
           <form action="" class="form__form">
-            <div class="form__name-wrapper">
+            <div
+            data-errormsg='Please enter your name'
+            data-default_label='Full name'
+            class="form__name-wrapper js-form-validation">
               <label class="form__label" for="fname">Full name</label>
               <input type="text" name='fname' class="form__name js-label-morph">
             </div>
-            <div class="form__email-wrapper">
+            <div
+            data-errormsg='Please enter your e-mail'
+            data-default_label='Email'
+            class="form__email-wrapper js-form-validation">
               <label class="form__label label-shrink" for="email">Email</label>
               <input type="text" name="email" class="form__email js-label-morph" value='webzavod@gmail.com'>
             </div>
-            <div class="form__info-wrapper">
+            <div
+            data-errormsg='Please write something'
+            data-default_label='Scope of work / Budget / Timeline / Location'
+            class="form__info-wrapper js-form-validation">
               <label class="form__label form__label--info" for="info">Scope of work / Budget / Timeline / Location</label>
               <textarea name="info" id="" cols="30" rows="3" class="form__info js-label-morph"></textarea>
             </div>
@@ -351,7 +417,7 @@
                 <span>Attached_file.svg</span>
                 <img class="upload-cancel-icon" src="./img/upload_cancel.svg" alt="">
               </label>
-              <input type="file" name="file" class="form__file">
+              <input type="file" name="file" class="form__file" id='js-form-file-1'>
             </div>
             <div class="form__file-wrapper">
               <label class="form__file-label" for="file">
@@ -361,7 +427,7 @@
               </label>
               <input type="file" name="file" class="form__file">
             </div>
-            <input type="submit" value='Send' class="form__submit blue-button">
+            <input type="submit" value='Send' formaction='javascript:void(0)' class="form__submit blue-button" id="js-index-form-submit">
           </form>
         </div>
         <div class="form__image">
@@ -400,7 +466,7 @@
               <label for="footer-email" class="footer__newsletter-title">Subscribe to our newSletter</label>
               <div class="footer__newsletter-email-block">
                 <input type="email" placeholder="Email" name='footer-email' class="footer__newsletter-email">
-                <input type="submit" value='' class="footer__newsletter-submit">
+                <input type="submit" value='' class="footer__newsletter-submit" id="js-index-form-submit">
               </div>
             </form>
           </div>
@@ -431,6 +497,7 @@
   <script src="./js/jquery-ui-tabs.min.js" type="text/javascript"></script>
   <script src="./js/magnific-popup.min.js" type="text/javascript"></script>
   <script src="./js/masonry.pkgd.min.js" type="text/javascript"></script>
+  <script src="./js/swiper.min.js"></script>
   <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.min.js"></script> -->
   <script src="./js/scripts.js" type="text/javascript"></script>
 </html>

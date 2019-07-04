@@ -38,13 +38,20 @@ body
   height: 44px
   color: $white
   cursor: pointer
-  transition: 300ms
+  transition: background-position 300ms
   &:hover
     background-position: 90%
   &:active
     background-position: center
   &:active, &:focus
     outline: none
+  &--inactive
+    background: $palegrey
+    color: $grey
+    cursor: default
+    pointer-events: none
+
+
 
 
 .heading-48, .heading-40, .heading-36
