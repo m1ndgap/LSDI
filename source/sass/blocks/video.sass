@@ -1,34 +1,42 @@
 .video
   background: $paleblue
   &__container
+    @include container
     box-sizing: border-box
-    margin: auto
     padding: 144px 149px
     width: 100%
-    max-width: 1440px
     display: flex
   &__text-block
     padding-top: 40px
     margin-left: 7.5%
     display: flex
     flex-flow: column nowrap
+  &__wrapper
+    border-radius: 10px
+    @include media('<huge')
+      width: 50%
 
   &__video
     position: relative
+    border-radius: 20px
     min-width: 587px
     height: 386px
-    background: url('../img/video_placeholder.png')
+    // background: url('../img/video_placeholder.png')
     display: flex
     justify-content: center
     align-items: center
+    background: $black
     //&__play-button
-    &::after
+    @include media('<huge')
+      width: 100%
+    //&::after
       display: block
       position: absolute
       content: " "
       height: 72px
       width: 72px
       background: $blue url('../img/play_button.svg')
+
 
   // &__title
 

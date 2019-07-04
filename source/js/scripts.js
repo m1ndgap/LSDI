@@ -7,6 +7,27 @@ $( document ).ready(function() {
   //   dots: true,
   // });
 
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 10000,
+    },
+
+    // Navigation arrows
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
+
+    // And if we need scrollbar
+  })
+
   $('#clients_tabs').tabs();
 
   $('#js-index-gallery a').magnificPopup({
@@ -22,23 +43,11 @@ $( document ).ready(function() {
   }
   });
 
-  $(".js-label-morph").on({
-    focus: function() {
-      $(this).siblings('.form__label').addClass('label-shrink');
-      },
-    focusout: function() {
-      if ($(this).val() != ""){
-
-      } else {
-        $(this).siblings('.form__label').removeClass('label-shrink');
-      }
-    }
-  });
-
   $('#js-index-gallery').masonry({
     columnWidth: '.masonry-sizer',
     gutter: '.masonry-gutter',
     itemSelector: '.gallery__image',
+    fitWidth: true,
     percentPosition: true
   })
 
@@ -67,7 +76,58 @@ $( document ).ready(function() {
   $('.js-gallery-extra').removeClass('js-gallery-extra')
   });
 
+  $(".js-label-morph").on({
+    focus: function() {
+      let default_text = $(this).closest('.js-form-validation').data('default_label');
+      $(this).siblings('.form__label').addClass('label-shrink');
+      $(this).closest('.js-form-validation').removeClass('form__input-error');
+      $(this).siblings('.form__label').val(default_text)
+      },
+    focusout: function() {
+      if ($(this).val() != ""){
 
+      } else {
+        $(this).siblings('.form__label').removeClass('label-shrink');
+      }
+    }
+  });
+
+  $('#js-index-form-submit').on('click', function(){
+    $('.js-form-validation').each(function(){
+      let input = $(this).find('input');
+      let tarea = $(this).find('textarea');
+      let label = $(this).find('label');
+      let errormsg= $(this).data('errormsg');
+      if ((input.val() == '') || (tarea.val() == '')) {
+        $(this).addClass('form__input-error');
+        label.text(errormsg);
+      };
+    });
+  });
+  //
+  // $("#js-form-file-1").on({
+  //   change: function(event) {
+  //     event.preventDefault();
+  //     event.stopPropagation();
+  //     console.log(1);
+  //   },
+  //   dragover: function(event) {
+  //     event.preventDefault();
+  //     event.stopPropagation();
+  //     console.log(2);
+  //   },
+  //   dragleave: function(event) {
+  //     event.preventDefault();
+  //     event.stopPropagation();
+  //     console.log(3);
+  //   },
+  //   drop: function(event) {
+  //     event.preventDefault();
+  //     event.stopPropagation();
+  //     console.log($(this)[0].files[0].size);
+  //
+  //   }
+  // });
 
 
 });
