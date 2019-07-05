@@ -21,21 +21,51 @@
     border-radius: 20px
     min-width: 587px
     height: 386px
-    // background: url('../img/video_placeholder.png')
+    background: url('../img/video_placeholder.png')
     display: flex
     justify-content: center
     align-items: center
-    background: $black
-    //&__play-button
+    border: 0
     @include media('<huge')
       width: 100%
-    //&::after
+
+  &__popup
+    width: 800px
+    position: relative
+    margin: auto
+    .mfp-close
+      color: $blue
+      font-size: 50px
+  &__iframe
+    height: 500px
+    width: 700px
+    margin: auto
+    display: block
+
+  &__play-button
+    display: block
+    background: $blue
+    height: 72px
+    width: 72px
+    border-radius: 50%
+    position: relative
+    top: 0px
+    transition: 300ms
+    &::after
       display: block
       position: absolute
       content: " "
-      height: 72px
-      width: 72px
-      background: $blue url('../img/play_button.svg')
+      left: 30px
+      top: 23px
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 13px 0 13px 18px
+      border-color: transparent transparent transparent #ffffff
+    &:hover
+      top: -2px
+
+
 
 
   // &__title

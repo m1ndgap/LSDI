@@ -28,6 +28,12 @@ $( document ).ready(function() {
     // And if we need scrollbar
   })
 
+  $('#js-video-popup').magnificPopup({
+    type:'inline',
+    midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    closeBtnInside:true
+  });
+
   $('#clients_tabs').tabs();
 
   $('#js-index-gallery a').magnificPopup({
@@ -43,12 +49,12 @@ $( document ).ready(function() {
   }
   });
 
+
+
   $('#js-index-gallery').masonry({
     columnWidth: '.masonry-sizer',
-    gutter: '.masonry-gutter',
     itemSelector: '.gallery__image',
     fitWidth: true,
-    percentPosition: true
   })
 
   $('#js-gallery-add-items').on( 'click', function() {
@@ -79,17 +85,43 @@ $( document ).ready(function() {
   $(".js-label-morph").on({
     focus: function() {
       let default_text = $(this).closest('.js-form-validation').data('default_label');
+      let submit = $("#js-index-form-submit")
       $(this).siblings('.form__label').addClass('label-shrink');
       $(this).closest('.js-form-validation').removeClass('form__input-error');
-      $(this).siblings('.form__label').val(default_text)
+      $(this).siblings('.form__label').text(default_text);
+      submit.removeClass('blue-button--inactive');
       },
     focusout: function() {
-      if ($(this).val() != ""){
+      let parent = $(this).closest('.js-form-validation');
+      let content = $(this).val();
+      let input = $(this);
+      if (content != ""){
 
       } else {
-        $(this).siblings('.form__label').removeClass('label-shrink');
+        input.siblings('.form__label').removeClass('label-shrink');
       }
     }
+  });
+
+  $('.js-email-validation').on({
+    focusout: function() {
+      let content = $(this).val();
+      let validation = validateEmail(content);
+      let parent = $(this).closest('.js-form-validation');
+      let label = $(this).siblings('.form__label');
+      //let submit = $(".form__submit");
+      if (validation) {
+
+      } else {
+        if ( content.length > 0 ) {
+          // submit.addClass('blue-button--inactive');
+          // this is not working for some reason...
+          parent.addClass('form__input-error');
+          label.text("Please enter a valid e-mail");
+        }
+      }
+    },
+    keyup: function() {}
   });
 
   $('#js-index-form-submit').on('click', function(){
@@ -104,6 +136,22 @@ $( document ).ready(function() {
       };
     });
   });
+
+  Dropzone.autoDiscover = false;
+  $("#js-index-form-file-1").dropzone({
+    url: "/file/post",
+    maxFilesize: 20,
+    addRemoveLinks: true,
+    success: function (file, response) {
+        var imgName = response;
+        file.previewElement.classList.add("dz-success");
+        console.log("Successfully uploaded :" + imgName);
+    },
+    error: function (file, response) {
+        file.previewElement.classList.add("dz-error");
+    }
+  });
+
   //
   // $("#js-form-file-1").on({
   //   change: function(event) {
@@ -129,5 +177,8 @@ $( document ).ready(function() {
   //   }
   // });
 
-
+  function validateEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+  }
 });
