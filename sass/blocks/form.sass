@@ -41,10 +41,11 @@
     justify-content: space-between
     align-items: flex-start
 
-  input[type='text'], textarea[name="info"]
+  input[type='text'], input[type='email'], textarea[name="info"]
     &:focus
       outline: none
       border-bottom: 2px solid $blue
+      margin-bottom: -1px
 
 
   &__name-wrapper, &__email-wrapper
@@ -102,6 +103,7 @@
       .form__file-label
         color: $black
   &__file
+    display: none
     position: absolute
     width: 100%
     top: 0
@@ -111,6 +113,7 @@
     opacity: 0
     z-index: 5
   &__file-label
+    max-height: 60px
     position: relative
     box-sizing: content-box
     display: flex
@@ -157,11 +160,15 @@
         z-index: 5
         cursor: pointer
 
+  .dz-preview
+    display: none
+
   &__input-error
     .form__label
       color: $red
     input
       border-bottom: 1px solid $red
+      color: $red
     textarea
       border-bottom: 1px solid $red
 

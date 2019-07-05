@@ -168,15 +168,11 @@
     <div class="video">
       <div class="video__container">
         <div class="video__wrapper">
-        <iframe class="video__video"
-          src="https://player.vimeo.com/video/8014946?title=0&byline=0&portrait=0&controls=0"
-          frameborder="0"
-          color="#00AAE5"
-          allow="autoplay; fullscreen"
-          controls="0"
-          allowfullscreen>
+        <div class="video__video">
+          <a href="#index-video-popup" class="video__play-button" id="js-video-popup">
 
-          </iframe>
+          </a>
+        </div>
         </div>
         <div class="video__text-block">
           <div class="heading-40 video__title">The visual layer for your digital business</div>
@@ -402,7 +398,7 @@
             data-default_label='Email'
             class="form__email-wrapper js-form-validation">
               <label class="form__label label-shrink" for="email">Email</label>
-              <input type="text" name="email" class="form__email js-label-morph" value='webzavod@gmail.com'>
+              <input type="email" name="email" class="form__email js-label-morph js-email-validation" value='webzavod@gmail.com'>
             </div>
             <div
             data-errormsg='Please write something'
@@ -412,15 +408,15 @@
               <textarea name="info" id="" cols="30" rows="3" class="form__info js-label-morph"></textarea>
             </div>
             <div class="form__file-wrapper">
-              <label class="form__file-label form__file-label--uploaded" for="file">
+              <label class="form__file-label form__file-label--uploaded" for="file" id='js-index-form-file-1'>
                 <img class="upload-icon" src="./img/upload_icon.svg" alt="">
                 <span>Attached_file.svg</span>
                 <img class="upload-cancel-icon" src="./img/upload_cancel.svg" alt="">
               </label>
-              <input type="file" name="file" class="form__file" id='js-form-file-1'>
+              <input type="file" name="file" class="form__file" id='js-index-form-file-1'>
             </div>
             <div class="form__file-wrapper">
-              <label class="form__file-label" for="file">
+              <label class="form__file-label" for="file" id='js-index-form-file-2'>
                 <img class="upload-icon" src="./img/upload_icon.svg" alt="">
                 <span>Attach file</span>
                 <img class="upload-cancel-icon" src="./img/upload_cancel.svg" alt="">
@@ -492,12 +488,16 @@
         <img src="./img/gallery/gallery_3.jpg" alt="" class="gallery__image-img">
       </a>
     </div>
+    <div class="mfp-hide video__popup" id="index-video-popup">
+      <iframe class="video__iframe" src="https://player.vimeo.com/video/8014946?title=0&amp;byline=0&amp;portrait=0&amp;controls=0" frameborder="0" color="#00AAE5" allow="autoplay; fullscreen" controls="0" allowfullscreen=""></iframe>
+    </div>
   </body>
   <script src="./js/jquery-3.4.1.min.js" type="text/javascript"></script>
   <script src="./js/jquery-ui-tabs.min.js" type="text/javascript"></script>
   <script src="./js/magnific-popup.min.js" type="text/javascript"></script>
   <script src="./js/masonry.pkgd.min.js" type="text/javascript"></script>
   <script src="./js/swiper.min.js"></script>
+  <script src="./js/dropzone.js"></script>
   <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.min.js"></script> -->
   <script src="./js/scripts.js" type="text/javascript"></script>
 </html>
