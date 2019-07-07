@@ -14,10 +14,16 @@
     display: block
     max-width: 200px
     margin: 140px auto 104px
+    @include media('<large')
+      margin: 101px auto 71px
+    @include media('<small')
+      margin: 68px auto 33px
 
   &__blue-button
     width: 203px
     height: 60px
+    @include media('<large')
+      width: 195px
 
   &__item-wrapper
     padding: 0 32px 0
@@ -26,3 +32,9 @@
     width: 100%
     display: flex
     justify-content: space-between
+    @include media('<small')
+      flex-flow: column nowrap
+      max-width: 500px
+      margin: auto
+    @include media('<tinyish')
+      padding: 0 20px 0

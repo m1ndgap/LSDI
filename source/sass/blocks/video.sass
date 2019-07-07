@@ -6,11 +6,82 @@
     padding: 144px 149px
     width: 100%
     display: flex
+    @include media('<huge')
+      max-width: 1280px
+      padding: 100px 32px 100px
+    @include media('<large')
+      max-width: 1024px
+      padding: 100px 32px 100px
+    @include media('<medium')
+      flex-flow: column nowrap
+      padding: 65px 0 65px
+    @include media('<small')
+      padding: 65px 20px 65px
+
   &__text-block
-    padding-top: 40px
+    padding-top: 48px
     margin-left: 7.5%
     display: flex
     flex-flow: column nowrap
+    @include media('<huge')
+      flex-basis: 40%
+    @include media('<large')
+      flex-basis: 41%
+      padding-top: 30px
+      margin-left: 8.5%
+    @include media('<medium')
+      width: 68%
+      margin-left: auto
+      margin-right: auto
+    @include media('<small')
+      width: 100%
+
+  &__title
+    letter-spacing: -1.5px
+    @include media('<large')
+      line-height: 37px
+      letter-spacing: -0.5px
+    @include media('<medium')
+      display: none
+
+  &__mobile-title
+    display: none
+    @include media('<medium')
+      display: block
+      text-align: center
+      margin-bottom: 40px
+      br
+        display: none
+    @include media('<smallish')
+      text-align: left
+      max-width: 280px
+      width: 100%
+      margin: 0 auto 28px
+      br
+        display: inline
+
+  &__text
+    margin-top: 24px
+    font-size: 18px
+    line-height: 32px
+    color: $grey
+    @include media('<large')
+      width: auto
+      margin-top: 18px
+      font-size: 18px
+      line-height: 29px
+    @include media('<medium')
+      text-align: center
+      margin: auto
+    @include media('<small')
+      font-size: 16px
+      line-height: 24px
+    @include media('<smallish')
+      text-align: left
+      max-width: 280px
+
+
+
   &__wrapper
     border-radius: 10px
     @include media('<huge')
@@ -18,16 +89,37 @@
 
   &__video
     position: relative
-    border-radius: 20px
+    border-radius: 10px
     min-width: 587px
     height: 386px
     background: url('../img/video_placeholder.png')
+    background-position: center
     display: flex
     justify-content: center
     align-items: center
     border: 0
     @include media('<huge')
+      min-width: auto
+      flex-basis: 48.5%
+    @include media('<large')
+      flex-basis: 48.5%
+      min-width: auto
+      height: 330px
+    @include media('<medium')
+      flex-basis: auto
+      width: 500px
+      margin: auto
+    @include media('<small')
+      background-size: cover
+      max-width: 500px
+      height: 300px
       width: 100%
+      margin: auto
+      max-width: 500px
+    @include media('<smallish')
+      height: 184px
+      width: 280px
+
 
   &__popup
     width: 800px
@@ -36,11 +128,19 @@
     .mfp-close
       color: $blue
       font-size: 50px
+      @include media('<smallish')
+        top: 70px
+    @include media('<medium')
+      width: 100%
   &__iframe
     height: 500px
     width: 700px
     margin: auto
     display: block
+    @include media('<medium')
+      width: 90%
+    @include media('<small')
+
 
   &__play-button
     display: block
@@ -64,14 +164,16 @@
       border-color: transparent transparent transparent #ffffff
     &:hover
       top: -2px
-
-
-
-
-  // &__title
-
-  &__text
-    margin-top: 24px
-    font-size: 18px
-    line-height: 32px
-    color: $grey
+    @include media('<large')
+      height: 58px
+      width: 58px
+      &:after
+        left: 22px
+        top: 16px
+    @include media('<small')
+      height: 50px
+      width: 50px
+      &:after
+        left: 21px
+        top: 17px
+        border-width: 8px 0 8px 13px

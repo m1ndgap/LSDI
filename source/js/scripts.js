@@ -15,9 +15,9 @@ $( document ).ready(function() {
       el: '.swiper-pagination',
       clickable: true,
     },
-    autoplay: {
-      delay: 10000,
-    },
+    // autoplay: {
+    //   delay: 10000,
+    // },
 
     // Navigation arrows
     // navigation: {
@@ -35,6 +35,15 @@ $( document ).ready(function() {
   });
 
   $('#clients_tabs').tabs();
+
+  $('.clients__tabs-mobile li').on('click', function(){
+    let content = $(this).find('.clients__tabs-mobile-content');
+    let arrow = $(this).find('.clients__collapse-arrow');
+    content.slideToggle();
+    content.toggleClass('clients__tabs-mobile-content--hidden');
+    arrow.toggleClass('clients__collapse-arrow--open');
+    $(this).toggleClass('clients__tabs-mobile-title--active');
+  });
 
   $('#js-index-gallery a').magnificPopup({
     type: 'image',
