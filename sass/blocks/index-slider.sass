@@ -19,6 +19,8 @@
     width: 100%
     //padding: 137px 78px 211px 149px
     padding: 97px 10px 0
+    @include media('<large')
+      padding: 63px 10px 0
   &__slide
     height: 666px
     width: 100%
@@ -26,10 +28,18 @@
     box-sizing: border-box
     display: flex
     flex-flow: column wrap
-  &__text-heading, &__text, &__buttons
-    max-width: 470px
+    @include media('<huge')
+      padding: 40px 100px 200px
+    @include media('<large')
+      padding: 40px 22px 153px
+      height: 545px
+
   &__text-heading
     letter-spacing: -1.5px
+    @include media('<large')
+      font-size: 36px
+      letter-spacing: 0.1px
+      line-height: 45px
     &--slide-4
       margin-top: -48px
     &--slide-5
@@ -41,26 +51,33 @@
     color: $grey
     &--slide-2
       max-width: 430px
+      @include media('<large')
+        br
+          display: none
     &--slide-3
       max-width: 345px
+      @include media('<large')
+        br
+          display: none
     &--slide-4
       max-width: 438px
       margin-top: 25px
     &--slide-5
       max-width: 490px
+    @include media('<large')
+      margin-top: 27px
+      font-size: 16px
+      line-height: 29px
+  &__text-heading, &__text, &__buttons
+    max-width: 470px
+    @include media('<large')
+      max-width: 415px
 
   &__svg
     display: block
-    @include media('<huge')
-
     &--slide-1
       margin-top: -36px
       margin-left: 10%
-      @include media('<huge')
-        width: 50%
-        margin-left: 5%
-        margin-top: auto
-        margin-bottom: auto
     &--slide-2
       margin-top: -34px
       margin-left: 47px
@@ -73,6 +90,12 @@
     &--slide-5
       margin-top: 37px
       margin-left: 128px
+    @include media('<huge')
+      width: 49%
+      &--slide-1, &--slide-2, &--slide-3, &--slide-4, &--slide-5
+        margin: auto
+        margin-right: -6px
+        margin-top: 7px
   &__buttons
     margin-top: auto
     display: flex

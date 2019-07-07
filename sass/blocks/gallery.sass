@@ -12,11 +12,24 @@
 
   &__title
     margin-top: 150px
+    @include media('<large')
+      margin-top: 100px
+    @include media('<small')
+      margin-top: 64px
 
   &__text
     margin-top: 28px
     width: 63%
     text-align: center
+    @include media('<large')
+      margin-top: 17px
+      width: 65%
+    @include media('<small')
+      margin-top: 30px
+      font-size: 14px
+      width: 89%
+      line-height: 25px
+
 
   &__images
     width: 100%
@@ -28,23 +41,29 @@
     // justify-content: center
     // column-count: 4
     // column-gap: 3%
+    @include media('<large')
+      margin-top: 17px
+    @include media('<small')
+      padding: 0 20px 0
+      margin-top: 21px
 
   .masonry-sizer
     max-width: 15%
     flex-basis: 15%
     @include media('<huge')
       flex-basis: 30%
+    @include media('<small')
+      flex-basis: 50%
 
   // .masonry-gutter
   //   width: 2.1%
   //   display: block
 
   &__image
-
     border-radius: 12px
     max-width: 23%
     flex-basis: 23%
-    max-height: 400px
+    max-height: 500px
     overflow: hidden
     transition: 300ms
     display: flex
@@ -59,6 +78,25 @@
       border-radius: 12px
       margin-bottom: 16px
       margin-top: 16px
+    @include media('<large')
+      &:hover
+        img
+          box-shadow: none
+      img
+        width: 95%
+        max-width: 95%
+        object-fit: cover
+    @include media('<medium')
+      max-width: 30%
+      flex-basis: 30%
+    @include media('<small')
+      max-width: 90%
+      width: 90%
+      flex-basis: 50%
+      img
+        width: 95%
+        max-width: 95%
+        object-fit: cover
 
 
   &__blue-button

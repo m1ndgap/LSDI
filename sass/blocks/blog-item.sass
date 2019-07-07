@@ -11,6 +11,19 @@
   transition: 300ms
   &:hover
     box-shadow: 0px 10px 40px rgba(70, 151, 191, 0.1)
+  @include media('<large')
+    width: 31%
+    min-height: 412px
+    &:hover
+      box-shadow: none
+  @include media('<small')
+    width: 100%
+    max-width: 500px
+    margin-bottom: 20px
+    &:hover
+      box-shadow: none
+
+
 
   &__image
     max-width: 100%
@@ -18,32 +31,59 @@
       object-fit: cover
       max-width: 100%
       min-height: 314px
+      @include media('<large')
+        min-height: 214px
+      @include media('<small')
+        min-height: 201px
   &__text-block
     box-sizing: border-box
     padding: 24px 32px 28px
     display: flex
     flex-flow: column nowrap
     flex-grow: 1
+    @include media('<large')
+      padding: 11px 21px 28px
+    @include media('<small')
+      padding-top: 13px
   &__date
     font-size: 14px
     line-height: 18px
     color: $grey
+    @include media('<large')
+      font-size: 12px
+
   &__title
     @include resetmargin
     margin-top: 5px
     font-size: 20px
     color: $black
+    @include media('<large')
+      font-size: 16px
+      letter-spacing: -0.3px
+    @include media('<small')
+      margin-top: 6px
+
   &__text
     @include resetmargin
-    margin-top: 23px
-    margin-bottom: 20px
+    margin: 23px 0 20px
+    font-size: 16px
     line-height: 28px
     color: $grey
+    @include media('<large')
+      font-size: 14px
+      margin: 12px 0 13px
+      line-height: 23px
+    @include media('<small')
+      font-size: 14px
+      margin: 18px 0 23px
+      line-height: 24px
+
   &__link
     display: block
     position: relative
     align-self: flex-start
     margin-top: auto
+    font-size: 16px
     text-decoration: none
     color: $blue
     padding-bottom: 4px
@@ -61,3 +101,8 @@
     &:hover
       &:after
         right: -35px
+    @include media('<large')
+      font-size: 14px
+      padding-bottom: 0
+      &:after
+        background-size: 12px

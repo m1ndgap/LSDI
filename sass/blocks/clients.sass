@@ -1,11 +1,17 @@
 .clients
   background: $white
   margin-top: 129px
+  @include media('<large')
+    margin-top: 57px
+  @include media('<small')
+    margin-top: 42px
 
   &__container
     @include container
     display: flex
     flex-flow: column nowrap
+    @include media('<small')
+      padding: 0 20px
 
   &__text-block
     display: flex
@@ -22,19 +28,38 @@
     @include resetmargin
     margin-top: 16px
     letter-spacing: 0px
+    @include media('<large')
+      letter-spacing: 0.5px
+    @include media('<small')
+      width: 80%
+      margin-top: 21px
+
 
   &__text
     @include resetmargin
     margin-top: 28px
-    font-size: 18px
-    line-height: 33px
-    color: $grey
     width: 63%
+    line-height: 33px
+    font-size: 18px
+    color: $grey
     text-align: center
+    @include media('<large')
+      margin-top: 15px
+      width: 68%
+      line-height: 29px
+    @include media('<small')
+      font-size: 16px
+      width: 100%
+      line-height: 24px
+      margin-top: 27px
 
   &__tabs
     padding: 0 32px 0
     margin-top: 84px
+    @include media('<large')
+      margin-top: 73px
+    @include media('<small')
+      display: none
 
   &__tabs-heads
     @include resetlist
@@ -46,6 +71,8 @@
     transition: 300ms
     &:focus, &:active
       outline: none !important
+    @include media('<large')
+      height: 95px
 
   &__tab-head
     flex-basis: 25%
@@ -56,6 +83,34 @@
     &:hover
       .clients__tab-head-image
         border: 1px solid $blue
+    @include media('<large')
+      border-right: 0px solid $white
+      border-left: 0px solid $white
+      &--construction
+        flex-basis: 24%
+      &--govt
+        flex-basis: 23%
+      &--smallb
+        flex-grow: 1
+        .clients__tab-head-image
+          margin-right: 10px
+        .clients__tab-head-text
+          padding-left: 0
+          margin-right: 10px
+      &--hospitality
+        flex-basis: 23%
+        .clients__tab-head-text
+          margin-right: 6px
+    @include media('<medium')
+      // &--construction, &--govt, &--smallb, &--hospitality
+      //   flex-grow: 0
+      //   flex-basis: 25%
+      // &--smallb
+      //   .clients__tab-head-image
+      //     margin-right: 10px
+      //   .clients__tab-head-text
+      //     padding-left: 0
+      //     margin-right: 0
 
   &__tab-head-link
     flex-basis: 100%
@@ -63,6 +118,8 @@
     justify-content: center
     align-items: center
     text-decoration: none
+    @include media('<large')
+      //justify-content: fl
 
   &__tab-head-image
     width: 56px
@@ -74,6 +131,12 @@
     justify-content: center
     align-items: center
     transition: 300ms
+    @include media('<large')
+      //margin-left: 15px
+    @include media('<medium')
+      display: none
+      // width: 50px
+      // height: 50px
 
   &__tab-head-svg
     fill: $blue
@@ -83,23 +146,34 @@
     font-size: 16px
     font-weight: 500
     text-transform: uppercase
-    color: grey
+    color: $grey
     letter-spacing: 2px
     padding-left: 15px
+    @include media('<large')
+      font-size: 14px
+      letter-spacing: 1.5px
+      padding-left: 10px
+    @include media('<medium')
+      // font-size: 12px
+      // letter-spacing: 0.5px
+
 
   &__tab-content
     display: flex
     flex-flow: row wrap
     justify-content: center
-    padding: 80px 20px 122px 20px
+    padding: 80px 20px 122px
     img
       object-fit: scale-down
       display: block
       flex-basis: 20%
       margin-bottom: 30px
-
-  &__tabs-mobile
-    display: none
+    @include media('<large')
+      justify-content: center
+      padding: 42px 0 60px
+      img
+        flex-basis: 15%
+        margin-right: 30px
 
   .ui-state-active
     transition: 300ms
@@ -107,7 +181,101 @@
     box-shadow: 0px 10px 40px rgba(70, 151, 191, 0.2)
     .clients__tab-head-image
       border: 1px solid $blue
+    @include media('<large')
+      border-left: 1px solid $palegrey
+      border-right: 1px solid $palegrey
+      margin-left: -1px
+      margin-right: -1px
+
+
 
   .ui-tabs-tab, .ui-corner-top, .ui-state-default, .ui-state-focus, .ui-tab, .ui-tabs-active, .ui-state-active, .ui-tabs-anchor
     &:focus, &:active
       outline: none !important
+
+
+
+
+
+  &__tabs-mobile
+    display: none
+    @include media('<small')
+      @include resetlist
+      margin: auto
+      margin-top: 31px
+      margin-bottom: 70px
+      width: 100%
+      max-width: 500px
+      display: flex
+      flex-flow: column nowrap
+      border: 1px solid $palegrey
+      border-radius: 12px
+    li
+      border-top: 1px solid $palegrey
+      &:nth-child(1)
+        border-top: none
+
+    &-title
+      display: flex
+      align-items: center
+      height: 80px
+      padding: 0 8% 0 4.5%
+      border-top: 1px solid $palegrey
+      cursor: pointer
+      &--active
+        box-shadow: 0px 5px 20px rgba(70, 151, 191, 0.2)
+        .clients__tabs-mobile-title-image
+          border: 1px solid $blue
+      &:nth-child(1)
+        border-top: none
+
+
+      &-image
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: 300ms
+        height: 50px
+        width: 50px
+        border: 1px solid $palegrey
+        border-radius: 50%
+
+      &-text
+        min-width: 165px
+        font-size: 14px
+        font-weight: 500
+        text-transform: uppercase
+        color: $grey
+        letter-spacing: 0.6px
+        padding-left: 6%
+    &-content
+      display: flex
+      flex-flow: row wrap
+      &--hidden
+        display: none
+    &-img-wrap
+      display: flex
+      justify-content: center
+      flex-flow: row wrap
+      padding: 17px
+      padding-bottom: 30px
+      img
+        display: block
+        flex-basis: 20%
+        margin: 0 5% 10px
+        width: 40%
+        object-fit: scale-down
+
+  &__collapse-arrow
+    height: 10px
+    width: 10px
+    margin-left: auto
+    margin-bottom: 8px
+    border-right: 2px solid $blue
+    border-bottom: 2px solid $blue
+    transform: rotate(45deg)
+    transition: 300ms
+
+    &--open
+      transform: rotate(225deg)
+      margin-bottom: -10px
