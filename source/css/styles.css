@@ -181,6 +181,9 @@ body {
   background: #F5FBFE;
   width: 100%;
   padding-bottom: 148px; }
+  @media (max-width: 767px) {
+    .blog {
+      padding-bottom: 70px; } }
   .blog__container {
     box-sizing: border-box;
     max-width: 1440px;
@@ -205,6 +208,9 @@ body {
     @media (max-width: 1279px) {
       .blog__blue-button {
         width: 195px; } }
+    @media (max-width: 767px) {
+      .blog__blue-button {
+        margin-top: 10px; } }
   .blog__item-wrapper {
     padding: 0 32px 0;
     margin-bottom: 83px;
@@ -1058,6 +1064,9 @@ body {
   background: #ffffff;
   padding-bottom: 146px;
   transition: 300ms; }
+  @media (max-width: 767px) {
+    .gallery {
+      padding-bottom: 70px; } }
   .gallery__container {
     box-sizing: border-box;
     max-width: 1440px;
@@ -1151,6 +1160,9 @@ body {
     margin-top: 80px;
     width: 203px;
     height: 60px; }
+    @media (max-width: 767px) {
+      .gallery__blue-button {
+        margin-top: 10px; } }
 
 .js-gallery-extra-hidden-block {
   display: none; }
