@@ -4,6 +4,22 @@
   height: 120px
   background: $white
   box-shadow: 0px 10px 40px rgba(70, 151, 191, 0.1)
+  @include media('<medium')
+    height: 71px
+    display: flex
+
 
   &__logo
     margin-right: 3%
+    @include media('<medium')
+      margin-right: 0
+      width: 100px
+      height: 40px
+      svg
+        width: 100px
+        background-size: contain
+    @include media("<small")
+      width: 86px
+      height: 31px
+      svg
+        width: 86px
