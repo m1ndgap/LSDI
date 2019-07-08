@@ -3,6 +3,8 @@
   background: $white
   padding-bottom: 146px
   transition: 300ms
+  @include media('<small')
+    padding-bottom: 70px
 
   &__container
     @include container
@@ -103,6 +105,8 @@
     margin-top: 80px
     width: 203px
     height: 60px
+    @include media('<small')
+      margin-top: 10px
 
 .js-gallery-extra-hidden-block
   display: none
