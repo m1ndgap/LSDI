@@ -15,6 +15,11 @@ $( document ).ready(function() {
       el: '.swiper-pagination',
       clickable: true,
     },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
     // autoplay: {
     //   delay: 10000,
     // },
