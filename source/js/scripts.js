@@ -7,6 +7,12 @@ $( document ).ready(function() {
   //   dots: true,
   // });
 
+  $(document).ready(function(){
+  	$('#nav-icon').click(function(){
+  		$(this).toggleClass('open');
+  	});
+  });
+
   var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
     direction: 'horizontal',
