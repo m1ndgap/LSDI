@@ -675,7 +675,7 @@ body {
         margin-top: 11px;
         width: 70%;
         flex-flow: column wrap;
-        max-height: 100px; } }
+        max-height: 130px; } }
     @media (max-width: 499px) {
       .footer__menu {
         width: 91%; } }
