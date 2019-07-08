@@ -79,6 +79,7 @@
     @include media('<small')
       text-align: left
       margin: 15px 0
+      width: 50%
 
 
 
@@ -88,6 +89,10 @@
     transition: 300ms
     &:hover
       color: $black
+
+  &__menu-item-link
+    @include media('<small')
+      width: 100%
 
   &__copyright
     font-size: 14px
