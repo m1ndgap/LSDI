@@ -5,6 +5,15 @@
     //overflow: hidden
   .swiper-pagination
     bottom: 54px
+    @include media('<medium')
+      bottom: 661px
+    @include media('<small')
+      bottom: 559px
+    @include media('<smallish')
+      bottom: 463px
+    @include media('<tinyish')
+      bottom: 420px
+
     .swiper-pagination-bullet
       width: 12px
       height: 12px
@@ -21,6 +30,8 @@
     padding: 97px 10px 0
     @include media('<large')
       padding: 63px 10px 0
+    @include media('<medium')
+      padding: 0
   &__slide
     height: 666px
     width: 100%
@@ -33,6 +44,21 @@
     @include media('<large')
       padding: 40px 22px 153px
       height: 545px
+    @include media('<medium')
+      flex-flow: column nowrap
+      height: auto
+      padding: 48px 20px 70px
+
+  &__text-block
+    @include media('<medium')
+      min-height: 225px
+    @include media('<smallish')
+      display: flex
+      flex-flow: column nowrap
+      justify-content: center
+      min-height: 275px
+    @include media('<tinyish')
+      min-height: 355px
 
   &__text-heading
     letter-spacing: -1.5px
@@ -44,6 +70,10 @@
       margin-top: -48px
     &--slide-5
       max-width: 425px
+    @include media('<medium')
+      font-size: 28px
+      line-height: 35px
+      margin: 0 auto 0
   &__text
     margin-top: 38px
     font-size: 18px
@@ -68,10 +98,17 @@
       margin-top: 27px
       font-size: 16px
       line-height: 29px
+    @include media('<medium')
+      margin: 0 auto 0
+      line-height: 24px
+      margin-top: 28px
   &__text-heading, &__text, &__buttons
     max-width: 470px
     @include media('<large')
       max-width: 415px
+    @include media('<medium')
+      width: 100%
+      max-width: 500px
 
   &__svg
     display: block
@@ -96,15 +133,34 @@
         margin: auto
         margin-right: -6px
         margin-top: 7px
+    @include media('<medium')
+      width: 500px
+      height: 450px
+      margin: auto
+      margin-top: 37px
+    @include media('<small')
+      width: 400px
+      height: 350px
+    @include media('<smallish')
+      width: 300px
+      height: 250px
+    @include media('<tinyish')
+      width: 280px
+      height: 200px
+
   &__buttons
     margin-top: auto
     display: flex
     align-items: center
+    @include media('<medium')
+      margin: 100px auto 0
   &__blue-button
     height: auto
     font-size: 16px
     padding: 21px 53px 21px
     letter-spacing: 0.5px
+    @include media('<medium')
+      width: 100%
   &__arrow
     //hiding arrows for now
     display: none
