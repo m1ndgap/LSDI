@@ -150,7 +150,8 @@ body {
   transition: 0.25s ease-in-out;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: default; }
 
 #nav-icon span:nth-child(1) {
   top: 0px; }
