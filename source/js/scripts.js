@@ -8,15 +8,14 @@ $( document ).ready(function() {
   // });
 
   $('#nav-icon').on('click', function(){
+    $(this).toggleClass('open');
     $('#header-mobile-menu').toggleClass('header-mobile-menu--active');
     $('.header').toggleClass('header--no-overflow');
   });
 
-  $(document).ready(function(){
-  	$('#nav-icon').click(function(){
-  		$(this).toggleClass('open');
-  	});
-  });
+
+    // slider progress animation
+
 
   var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
@@ -26,14 +25,18 @@ $( document ).ready(function() {
       el: '.swiper-pagination',
       clickable: true,
     },
-
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+    renderBullet: function (index, className) {
+      console.log(1);
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
     },
-    // autoplay: {
-    //   delay: 10000,
-    // },
+    autoplay: {
+      delay: 5000,
+    },
+    on: {
+      slideChange: function() {
+
+      }
+    },
 
     // Navigation arrows
     // navigation: {
@@ -44,12 +47,39 @@ $( document ).ready(function() {
     // And if we need scrollbar
   })
 
+  var bar = new ProgressBar.Circle('.swiper-pagination-bullet-active', {
+  strokeWidth: 17,
+  easing: 'easeInOut',
+  duration: 5000,
+  color: '#00AAE5',
+  trailColor: '#D9E7EE',
+  trailWidth: 17,
+  svgStyle: null
+  });
+  bar.animate(1.0);
+
+  mySwiper.on('slideChange', function() {
+    $('.swiper-pagination-bullet svg').remove();
+    var bar = new ProgressBar.Circle('.swiper-pagination-bullet-active', {
+    strokeWidth: 17,
+    easing: 'easeInOut',
+    duration: 5000,
+    color: '#00AAE5',
+    trailColor: '#D9E7EE',
+    trailWidth: 17,
+    svgStyle: null
+    });
+    bar.animate(1.0);
+  })
+
+  // video popup
   $('#js-video-popup').magnificPopup({
     type:'inline',
     midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
     closeBtnInside:true
   });
 
+  // initiating jq client tabs
   $('#clients_tabs').tabs();
 
   $('.clients__tabs-mobile li').on('click', function(){

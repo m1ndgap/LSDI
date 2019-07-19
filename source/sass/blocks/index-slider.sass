@@ -5,10 +5,16 @@
     //overflow: hidden
   .swiper-pagination
     bottom: 54px
+    display: flex
+    justify-content: center
+    align-items: center
     @include media('<medium')
       bottom: 661px
     @include media('<small')
       bottom: 559px
+      justify-content: flex-start
+      max-width: 500px
+      margin: auto
     @include media('<smallish')
       bottom: 463px
     @include media('<tinyish')
@@ -18,9 +24,12 @@
       width: 12px
       height: 12px
       margin: 0 8px
-      background: $paleblue
-    .swiper-pagination-bullet
       background: $blue
+    .swiper-pagination-bullet-active
+      background: $white
+      height: 20px
+      width: 20px
+
 
   &__container
     @include container
