@@ -192,20 +192,52 @@ $( document ).ready(function() {
     });
   });
 
+  //removing default text for remove button, cant figure out why it wont work with data attribute
+  Dropzone.prototype.defaultOptions.dictRemoveFile = "";
+
   Dropzone.autoDiscover = false;
-  $("#js-index-form-file-1").dropzone({
+  $("#index-dropzone").dropzone({
     url: "/file/post",
+    maxFiles: 2,
     maxFilesize: 20,
+    // probably because of this lol
     addRemoveLinks: true,
+    dictMaxFilesExceeded: 'Only 2 files',
     success: function (file, response) {
         var imgName = response;
         file.previewElement.classList.add("dz-success");
         console.log("Successfully uploaded :" + imgName);
     },
+    accept: function(file, done) {
+      let dropzone = $('#index-dropzone');
+      $("#index-dropzone .form__file-wrapper-dud").remove();
+      let fileDud = $('#file-dud')
+      console.log(dropzone.children().length);
+      if (dropzone.children().length <= 2) {
+        $('.file-dud').clone().appendTo('#index-dropzone');
+      };
+      if (dropzone.children().length > 3) {
+        dropzone.children().last().remove();
+      }
+    },
+    removedfile: function(file){
+      let dropzone = $('#index-dropzone');
+      file.previewElement.remove();
+      if (dropzone.children().length <= 2) {
+        console.log("duds:" + dropzone.children('.file-dud').length);
+        if (dropzone.children('.file-dud').length == 0) {
+          $('.file-dud').clone().appendTo('#index-dropzone');
+        }
+      }
+    },
     error: function (file, response) {
         file.previewElement.classList.add("dz-error");
-    }
+    },
+
+    previewTemplate: document.querySelector('#tpl').innerHTML,
   });
+
+
 
   //
   // $("#js-form-file-1").on({
@@ -231,6 +263,10 @@ $( document ).ready(function() {
   //
   //   }
   // });
+
+  function addDud() {
+
+  };
 
   function validateEmail(email) {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
