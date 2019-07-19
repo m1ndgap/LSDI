@@ -1507,13 +1507,12 @@ body {
         bottom: 661px; } }
     @media (max-width: 767px) {
       .index-slider .swiper-pagination {
-        bottom: 559px;
-        justify-content: flex-start;
-        max-width: 500px;
-        margin: auto; } }
+        bottom: 559px; } }
     @media (max-width: 499px) {
       .index-slider .swiper-pagination {
-        bottom: 463px; } }
+        bottom: 463px;
+        justify-content: flex-start;
+        padding-left: 6%; } }
     @media (max-width: 374px) {
       .index-slider .swiper-pagination {
         bottom: 420px; } }
