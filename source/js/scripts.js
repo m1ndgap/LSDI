@@ -49,7 +49,7 @@ $( document ).ready(function() {
 
   var bar = new ProgressBar.Circle('.swiper-pagination-bullet-active', {
   strokeWidth: 17,
-  easing: 'easeInOut',
+  // easing: 'easeInOut',
   duration: 5000,
   color: '#00AAE5',
   trailColor: '#D9E7EE',
