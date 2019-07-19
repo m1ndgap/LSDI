@@ -155,7 +155,6 @@
     border: 0
     border-bottom: 1px solid $palegrey
   &__file-wrapper
-    margin-top: 41px
     flex-basis: 47.5%
     display: flex
     flex-flow: column nowrap
@@ -166,7 +165,9 @@
         color: $black
     @include media('<small')
       flex-basis: 100%
-      margin-top: 30px
+
+    &-dud
+      pointer-events: none
   &__file
     display: none
     position: absolute
@@ -189,6 +190,7 @@
     color: $grey
     transition: 300ms
     z-index: 1
+    flex-basis: 42%
     &:after
       content: ""
       position: absolute
@@ -199,10 +201,18 @@
       background-color: $white
       border-radius: 3px
       z-index: 2
+    @include media('<small')
+      margin-top: 18px
+      flex-basis: 100%
+
     span
       display: inline-block
       height: 17px
       z-index: 3
+      max-width: 200px
+      text-overflow: ellipsis
+      overflow: hidden
+      white-space: nowrap
     .upload-icon
       position: relative
       top: 1px
@@ -225,8 +235,39 @@
         z-index: 5
         cursor: pointer
 
-  .dz-preview
-    display: none
+  // .dz-preview
+  //   display: none
+  &__file-zone
+    position: relative
+    margin-top: 41px
+    width: 100%
+    height: 60px
+    display: flex
+    justify-content: space-between
+    @include media('<small')
+      height: auto
+      min-height: 60px
+      max-height: 140px
+      margin-top: 30px
+      flex-flow: row wrap
+
+
+
+    .dz-remove
+      margin-left: auto
+      z-index: 6
+      color: $black
+      height: 20px
+      width: 20px
+      background: url('../img/upload_cancel.svg') no-repeat
+      background-position: 50% 90%
+
+    .dz-message
+      position: absolute
+      top: -5
+      background: $red
+      color: $black
+
 
   &__input-error
     .form__label

@@ -513,7 +513,18 @@
               <label class="form__label form__label--info" for="info">Scope of work / Budget / Timeline / Location</label>
               <textarea name="info" id="" cols="30" rows="3" class="form__info js-label-morph"></textarea>
             </div>
-            <div class="form__file-wrapper">
+            <div class="form__file-zone" id="index-dropzone">
+              <div class="dz-message" data-dz-message><span></span></div>
+              <div class="form__file-wrapper form__file-wrapper-dud">
+                <label class="form__file-label" for="file">
+                  <img class="upload-icon" src="./img/upload_icon.svg" alt="">
+                  <span>Attach file</span>
+                  <img class="upload-cancel-icon" src="./img/upload_cancel.svg" alt="">
+                </label>
+              </div>
+            </div>
+
+            <!-- <div class="form__file-wrapper">
               <label class="form__file-label form__file-label--uploaded" for="file" id='js-index-form-file-1'>
                 <img class="upload-icon" src="./img/upload_icon.svg" alt="">
                 <span>Attached_file.svg</span>
@@ -528,7 +539,7 @@
                 <img class="upload-cancel-icon" src="./img/upload_cancel.svg" alt="">
               </label>
               <input type="file" name="file" class="form__file">
-            </div>
+            </div> -->
             <input type="submit" value='Send' formaction='javascript:void(0)' class="form__submit blue-button" id="js-index-form-submit">
           </form>
         </div>
@@ -596,6 +607,24 @@
     </div>
     <div class="mfp-hide video__popup" id="index-video-popup">
       <iframe class="video__iframe" src="https://player.vimeo.com/video/8014946?title=0&amp;byline=0&amp;portrait=0&amp;controls=0" frameborder="0" color="#00AAE5" allow="autoplay; fullscreen" controls="0" allowfullscreen=""></iframe>
+    </div>
+
+    <div class="tools" style='display: none'>
+      <div id='tpl' class="">
+        <label class="form__file-label form__file-label--uploaded">
+        <img class="upload-icon" src="./img/upload_icon.svg" alt="">
+        <span data-dz-name></span>
+        <!-- <img data-dz-remove class="upload-cancel-icon" src="./img/upload_cancel.svg" alt=""> -->
+        </label>
+        <div class="form__file-wrapper form__file-wrapper-dud file-dud" id="file-dud">
+          <label class="form__file-label" for="file">
+            <img class="upload-icon" src="./img/upload_icon.svg" alt="">
+            <span>Attach file</span>
+            <img class="upload-cancel-icon" src="./img/upload_cancel.svg" alt="">
+          </label>
+        </div>
+      </div>
+
     </div>
   </body>
   <script src="./js/jquery-3.4.1.min.js" type="text/javascript"></script>
