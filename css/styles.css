@@ -1538,6 +1538,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media (max-width: 1439px) {
+      .index-slider .swiper-pagination {
+        bottom: 120px; } }
+    @media (max-width: 1279px) {
+      .index-slider .swiper-pagination {
+        bottom: 54px; } }
     @media (max-width: 991px) {
       .index-slider .swiper-pagination {
         bottom: 661px; } }
