@@ -7,6 +7,11 @@ $( document ).ready(function() {
   //   dots: true,
   // });
 
+  $('#nav-icon').on('click', function(){
+    $('#header-mobile-menu').toggleClass('header-mobile-menu--active');
+    $('.header').toggleClass('header--no-overflow');
+  });
+
   $(document).ready(function(){
   	$('#nav-icon').click(function(){
   		$(this).toggleClass('open');

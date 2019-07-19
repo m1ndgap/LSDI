@@ -1,0 +1,82 @@
+#nav-icon
+  display: none
+  @include media('<large')
+    user-select: none
+    display: block
+    margin-top: 20px
+    z-index: 15
+  @include media('<medium')
+    margin-left: auto
+    margin-top: 0
+
+.header-mobile-menu
+  display: none
+  @include media('<large')
+    box-sizing: border-box
+    display: flex
+    flex-flow: column nowrap
+    position: absolute
+    height: 100vh
+    width: 400px
+    right: 0
+    top: 0
+    z-index: 10
+    padding: 63px 28px 28px
+    background: $white
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0)
+    transform: translate(100%, 0)
+    &__menu-list
+      @include resetlist
+    &__sm-list, &__phone-link
+      display: none
+    &__md-list
+      display: flex
+      flex-flow: column nowrap
+      align-items: flex-start
+    &__list-item
+      font-size: 16px
+      font-weight: 500
+      color: $grey
+      &--active
+        color: $black
+        padding-bottom: 5px
+        margin-bottom: -5px
+        border-bottom: 2px solid $blue
+
+    &__list-item + &__list-item
+      margin-top: 21px
+    &__login-button
+      font-weight: 500
+      color: $blue
+  @include media('<medium')
+    max-width: 275px
+    &__sm-list
+      margin-top: 40px
+      display: flex
+      flex-flow: column nowrap
+      align-items: flex-start
+    &__phone-link
+      display: block
+    &__phone-link
+      margin-top: auto
+      margin-bottom: 28px
+      padding-left: 30px
+      font-size: 16px
+      font-weight: 500
+      text-decoration: none
+      color: $black
+      position: relative
+      &::after
+        display: block
+        position: absolute
+        content: " "
+        background: url('../img/phone_icon.svg') no-repeat
+        height: 22px
+        width: 22px
+        top: -2px
+        left: -1px
+
+  &--active
+    transform: none
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0)
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.5)
