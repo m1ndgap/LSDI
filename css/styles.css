@@ -1319,7 +1319,7 @@ body {
       .header-mobile-menu__phone-link {
         display: block;
         margin-top: auto;
-        margin-bottom: 28px;
+        margin-bottom: 10px;
         padding-left: 30px;
         font-size: 16px;
         font-weight: 500;
@@ -1334,7 +1334,9 @@ body {
           height: 22px;
           width: 22px;
           top: -2px;
-          left: -1px; } }
+          left: -1px; }
+      .header-mobile-menu__login-button {
+        margin-top: 10px; } }
   .header-mobile-menu--active {
     transform: none;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
