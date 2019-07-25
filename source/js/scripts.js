@@ -230,6 +230,16 @@ $( document ).ready(function() {
         }
       }
     },
+    dragenter: function(event) {
+      console.log(11111);
+      let dropzone = $('#index-dropzone');
+      dropzone.find('.form__file-wrapper-dud').addClass('form__file-wrapper-dud--active');
+    },
+    dragleave: function(event) {
+      console.log(222222);
+      let dropzone = $('#index-dropzone');
+      dropzone.find('.form__file-wrapper-dud').removeClass('form__file-wrapper-dud--active');
+    },
     error: function (file, response) {
         file.previewElement.classList.add("dz-error");
     },

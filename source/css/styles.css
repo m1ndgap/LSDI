@@ -837,7 +837,8 @@ body {
       padding-bottom: 100px; } }
   .form__text-block, .form__wrapper {
     max-width: 672px;
-    width: 57%; }
+    width: 57%;
+    margin-bottom: 50px; }
   @media (max-width: 1279px) {
     .form__wrapper {
       width: 66%; } }
@@ -1000,6 +1001,8 @@ body {
         flex-basis: 100%; } }
     .form__file-wrapper-dud {
       pointer-events: none; }
+      .form__file-wrapper-dud--active .form__file-label {
+        border-color: #74D5FF; }
   .form__file {
     display: none;
     position: absolute;
@@ -1043,7 +1046,6 @@ body {
       z-index: 3;
       max-width: 200px;
       text-overflow: ellipsis;
-      overflow: hidden;
       white-space: nowrap; }
     .form__file-label .upload-icon {
       position: relative;
