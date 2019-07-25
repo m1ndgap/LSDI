@@ -7,6 +7,7 @@
   &__text-block, &__wrapper
     max-width: 672px
     width: 57%
+    margin-bottom: 50px
   &__wrapper
     @include media('<large')
       width: 66%
@@ -168,6 +169,9 @@
 
     &-dud
       pointer-events: none
+      &--active
+        .form__file-label
+          border-color: $lblue
   &__file
     display: none
     position: absolute
@@ -211,7 +215,6 @@
       z-index: 3
       max-width: 200px
       text-overflow: ellipsis
-      overflow: hidden
       white-space: nowrap
     .upload-icon
       position: relative
