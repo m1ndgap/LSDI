@@ -21,11 +21,27 @@
     @include media('<medium')
       display: none
 
+  &__core-items
+    @include resetlist
+    display: flex
+    width: 70%
+    .header-menu__item
+      margin-left: 48px
+    .header-menu__item--firm
+      margin-left: 10px
+    @include media('<huge')
+      width: 80%
 
   &__item-link
+    position: relative
+    top: 0
     font-size: 16px
     text-decoration: none
-    color: $grey
+    color: $black
+    transition: 300ms
+    &:hover
+      top: -2px
+
     &--dark-text
       color: $black
       font-weight: 500
@@ -33,7 +49,7 @@
   &__item
     display: flex
     justify-content: center
-    &--firm
+    //&--firm
       flex-basis: 4.5%
       margin-right: 2%
       a
@@ -46,7 +62,7 @@
         margin-right: 1%
       @include media('<medium')
         display: none
-    &--services
+    //&--services
       flex-basis: 9.3%
       margin-right: 2.1%
       @include media('<large')
@@ -54,7 +70,7 @@
         margin-right: 1%
       @include media('<medium')
         display: none
-    &--ssolutions
+    //&--ssolutions
       flex-basis: 12.5%
       margin-right: 2.5%
       @include media('<huge')
@@ -65,7 +81,7 @@
         margin-right: 0.5%
       @include media('<medium')
         display: none
-    &--esolutions
+    //&--esolutions
       flex-basis: 13.5%
       margin-right: 2.1%
       @include media('<huge')
@@ -90,6 +106,7 @@
       position: relative
       flex-basis: 14%
       justify-content: flex-end
+      margin-left: auto
       &::after
         display: block
         position: absolute
@@ -134,7 +151,8 @@
   &__search
     box-sizing: border-box
     position: relative
-    flex-basis: 15.5%
+    //flex-basis: 15.5%
+    margin-left: 100px !important
     justify-content: flex-start
     margin-right: 2%
     &::after
@@ -150,6 +168,7 @@
       z-index: 1
     @include media('<huge')
       margin-right: 0
+      margin-left: 0 !important
     @include media('<large')
       display: none
     input[type='text']
@@ -169,4 +188,6 @@
         opacity: 1
         outline: none
       &:active, &:focus
+        margin-left: -1px
+        margin-right: -1px
         border: 2px solid $blue

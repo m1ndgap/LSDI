@@ -1,7 +1,11 @@
 .blog
-  background: $paleblue
+  padding: 97px 0 126px 0
+  background-image: linear-gradient(177deg, $white 50%, $paleblue 50%), linear-gradient(178deg, $paleblue 50%, $white 50%)
+  background-color: $paleblue
+  background-repeat: no-repeat, no-repeat
+  background-size: 100% 100px, 100% 100px
+  background-position: top, bottom
   width: 100%
-  padding-bottom: 148px
   @include media('<small')
     padding-bottom: 70px
 
@@ -10,20 +14,42 @@
     display: flex
     flex-flow: column nowrap
     align-items: center
+    background-image: url('../img/bg_decorative/yellow_small_triangle.svg'), url('../img/bg_decorative/blue_medium_triangle.svg'), url('../img/bg_decorative/red_small_triangle.svg')
+    background-repeat: no-repeat, no-repeat, no-repeat
+    background-size: 35px, 25px, 45px
+    background-position: top 226px right 29px, top 54px left 80px, bottom 30px left 240px
+    @include media('<small')
+      background-position: top 226px right 29px, top 54px left 80px, bottom 30px left 5%
+
+  &__subtitle
+    margin-top: 50px
+    @include media('<small')
+      display: none
 
   &__title
     font-weight: bold
     display: block
-    max-width: 200px
-    margin: 140px auto 104px
+    margin: 19px auto 20px
     @include media('<large')
-      margin: 101px auto 71px
+      margin: 59px auto 20px
     @include media('<small')
-      margin: 68px auto 33px
+      max-width: 300px
+
+  &__text
+    display: block
+    text-align: center
+    margin: auto
+    margin-bottom: 101px
+    @include media('<large')
+      margin-bottom: 80px
+    @include media('<small')
+      margin-bottom: 30px
+      padding: 0 10px 0
 
   &__blue-button
     width: 203px
     height: 60px
+    margin-bottom: 50px
     @include media('<large')
       width: 195px
     @include media('<small')
