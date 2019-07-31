@@ -1,7 +1,16 @@
 .video
-  background: $paleblue
+  padding: 117px 0 125px 0
+  background-image: linear-gradient(177deg, $white 50%, $paleblue 50%), linear-gradient(183deg, $paleblue 50%, $white 50%)
+  background-color: $paleblue
+  background-repeat: no-repeat, no-repeat
+  background-size: 100% 100px, 100% 100px
+  background-position: top, bottom
   &__container
+    background-image: url('../img/bg_decorative/yellow_small_triangle.svg'), url('../img/bg_decorative/blue_medium_triangle.svg')
+    background-repeat: no-repeat, no-repeat
+    background-position: top 66px left 29px, bottom 105px right 64px
     @include container
+    transform: none
     box-sizing: border-box
     padding: 144px 149px
     width: 100%
@@ -35,6 +44,12 @@
       margin-right: auto
     @include media('<small')
       width: 100%
+
+  &__subtitle
+    margin-top: 40px
+    margin-bottom: 20px
+    @include media('<medium')
+      display: none
 
   &__title
     letter-spacing: -1.5px

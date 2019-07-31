@@ -13,6 +13,11 @@ $( document ).ready(function() {
     $('.header').toggleClass('header--no-overflow');
   });
 
+  $('.header-mobile-menu__list-item').on('click', function(){
+    $('#nav-icon').toggleClass('open');
+    $('#header-mobile-menu').toggleClass('header-mobile-menu--active');
+    $('.header').toggleClass('header--no-overflow');
+  });
 
     // slider progress animation
 

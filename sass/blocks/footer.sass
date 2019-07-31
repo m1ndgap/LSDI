@@ -210,8 +210,11 @@
 
 
   &__social
-    width: 104px
+    margin-left: -66px
+    width: 170px
     display: -webkit-flex
     display: -ms-flex
     display: flex
     justify-content: space-between
+    @include media('<small')
+      margin-left: 0

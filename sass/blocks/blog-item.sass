@@ -27,7 +27,9 @@
 
   &__image
     max-width: 100%
+    border-bottom: 4px solid $blue
     img
+      display: block
       object-fit: cover
       max-width: 100%
       min-height: 314px
@@ -54,8 +56,9 @@
 
   &__title
     @include resetmargin
+    text-align: center
     margin-top: 5px
-    font-size: 20px
+    font-size: 24px
     color: $black
     @include media('<large')
       font-size: 16px
@@ -69,6 +72,7 @@
     font-size: 16px
     line-height: 28px
     color: $grey
+    text-align: center
     @include media('<large')
       font-size: 14px
       margin: 12px 0 13px

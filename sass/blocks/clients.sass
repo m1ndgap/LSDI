@@ -82,9 +82,32 @@
     display: flex
     &:nth-child(4)
       border: none
-    &:hover
-      .clients__tab-head-image
-        border: 1px solid $blue
+    &--construction
+      &:hover
+        .clients__tab-head-image
+          border: 1px solid $red
+        .clients__tab-head-svg
+          fill: $red
+
+    &--govt
+      &:hover
+        .clients__tab-head-image
+          border: 1px solid $blue
+        .clients__tab-head-svg
+          fill: $blue
+    &--smallb
+      &:hover
+        .clients__tab-head-image
+          border: 1px solid $yellow
+        .clients__tab-head-svg
+          fill: $yellow
+    &--hospitality
+      &:hover
+        .clients__tab-head-image
+          border: 1px solid $red
+        .clients__tab-head-svg
+          fill: $red
+
     @include media('<large')
       border-right: 0px solid $white
       border-left: 0px solid $white
@@ -114,6 +137,8 @@
       //     padding-left: 0
       //     margin-right: 0
 
+
+
   &__tab-head-link
     flex-basis: 100%
     display: flex
@@ -141,7 +166,7 @@
       // height: 50px
 
   &__tab-head-svg
-    fill: $blue
+    fill: $palegrey
     transition: 300ms
 
   &__tab-head-text
@@ -164,30 +189,76 @@
     display: flex
     flex-flow: row wrap
     justify-content: center
-    padding: 80px 20px 122px
+    padding: 80px 100px 20px
     img
-      object-fit: scale-down
-      display: block
-      flex-basis: 20%
-      margin-bottom: 30px
+      object-fit: none
+      margin-bottom: 50px
+    img + img
+      margin-left: 11%
+    &--consruction
+    &--govt
+      img + img
+        margin-left: 8%
+    &--smallb
+      img + img
+        margin-left: 7%
+    &--hospitality
+      img + img
+        margin-left: 7%
+    @include media('<huge')
+      &--hospitality
+        img + img
+          margin-left: 6%
     @include media('<large')
       justify-content: center
       padding: 42px 0 60px
-      img
-        flex-basis: 15%
-        margin-right: 30px
+      img + img
+        margin-left: 9%
+      &--hospitality
+        img + img
+          margin-left: 4%
+    @include media('<medium')
+      img + img
+        margin-left: 3%
+      &--hospitality
+        img + img
+          margin-left: 5%
 
   .ui-state-active
     transition: 300ms
     outline: none
     box-shadow: 0px 10px 40px rgba(70, 151, 191, 0.2)
-    .clients__tab-head-image
+    //.clients__tab-head-image
       border: 1px solid $blue
     @include media('<large')
       border-left: 1px solid $palegrey
       border-right: 1px solid $palegrey
       margin-left: -1px
       margin-right: -1px
+
+  .ui-state-active.clients__tab-head--construction
+    .clients__tab-head-image
+      border: 1px solid $red
+    .clients__tab-head-svg
+      fill: $red
+
+  .ui-state-active.clients__tab-head--govt
+    .clients__tab-head-image
+      border: 1px solid $blue
+    .clients__tab-head-svg
+      fill: $blue
+
+  .ui-state-active.clients__tab-head--smallb
+    .clients__tab-head-image
+      border: 1px solid $yellow
+    .clients__tab-head-svg
+      fill: $yellow
+
+  .ui-state-active.clients__tab-head--hospitality
+    .clients__tab-head-image
+      border: 1px solid $red
+    .clients__tab-head-svg
+      fill: $red
 
 
 
@@ -226,8 +297,26 @@
       cursor: pointer
       &--active
         box-shadow: 0px 5px 20px rgba(70, 151, 191, 0.2)
-        .clients__tabs-mobile-title-image
-          border: 1px solid $blue
+        .clients__tabs-mobile-title--construction
+          .clients__tabs-mobile-title-image
+            border: 1px solid $red
+          .clients__tab-head-svg
+            fill: $red
+        .clients__tabs-mobile-title--govt
+          .clients__tabs-mobile-title-image
+            border: 1px solid $blue
+          .clients__tab-head-svg
+            fill: $blue
+        .clients__tabs-mobile-title--smallb
+          .clients__tabs-mobile-title-image
+            border: 1px solid $yellow
+          .clients__tab-head-svg
+            fill: $yellow
+        .clients__tabs-mobile-title--hospitality
+          .clients__tabs-mobile-title-image
+            border: 1px solid $blue
+          .clients__tab-head-svg
+            fill: $blue
       &:nth-child(1)
         border-top: none
 
@@ -264,8 +353,8 @@
       img
         display: block
         flex-basis: 20%
-        margin: 0 5% 10px
-        width: 40%
+        margin: 0 5% 20px
+        width: 34%
         object-fit: scale-down
 
   &__collapse-arrow

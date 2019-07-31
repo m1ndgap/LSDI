@@ -1,9 +1,11 @@
 .gallery
   width: 100%
   background: $white
-  padding-bottom: 146px
+  padding-bottom: 50px
+  padding-top: 100px
   transition: 300ms
   @include media('<small')
+    padding-top: 0
     padding-bottom: 70px
     overflow: hidden
 
@@ -13,10 +15,14 @@
     flex-flow: column nowrap
     align-items: center
 
+  &__subtitle
+    @include media('<small')
+      display: none
+
   &__title
-    margin-top: 150px
+    margin-top: 20px
     @include media('<large')
-      margin-top: 100px
+      margin-top: 20px
     @include media('<small')
       margin-top: 64px
 
