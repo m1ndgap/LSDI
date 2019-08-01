@@ -111,11 +111,11 @@ $( document ).ready(function() {
 
 
 
-  $('#js-index-gallery').masonry({
-    columnWidth: '.masonry-sizer',
-    itemSelector: '.gallery__image',
-    fitWidth: true,
-  })
+  // $('#js-index-gallery').masonry({
+  //   columnWidth: '.masonry-sizer',
+  //   itemSelector: '.gallery__image',
+  //   fitWidth: true,
+  // })
 
   $('#js-gallery-add-items').on( 'click', function() {
   // create new item elements
