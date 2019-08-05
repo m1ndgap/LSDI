@@ -24,31 +24,44 @@
   &__core-items
     @include resetlist
     display: flex
-    width: 70%
+    width: 100%
+    max-width: 567px
+    margin-left: 15.5%
+    justify-content: space-around
     .header-menu__item
-      margin-left: 48px
+      flex-basis: 19%
+      transition: 300ms
+      border-bottom: 0px solid $blue
+      &:hover
+        border-bottom: 4px solid $blue
     .header-menu__item--firm
       margin-left: 10px
     @include media('<huge')
-      width: 80%
+      margin-left: 5.5%
+    @include media('<large')
+      margin-left: 0
 
   &__item-link
     position: relative
     top: 0
     font-size: 16px
     text-decoration: none
-    color: $black
+    color: $grey
     transition: 300ms
     &:hover
-      top: -2px
+      color: $black
+
 
     &--dark-text
       color: $black
       font-weight: 500
 
+
+
   &__item
     display: flex
     justify-content: center
+
     //&--firm
       flex-basis: 4.5%
       margin-right: 2%
@@ -81,16 +94,8 @@
         margin-right: 0.5%
       @include media('<medium')
         display: none
-    //&--esolutions
-      flex-basis: 13.5%
-      margin-right: 2.1%
-      @include media('<huge')
-        flex-basis: 16.5%
-        margin-right: 1%
-      @include media('<large')
-        flex-basis: 20%
-      @include media('<medium')
-        display: none
+    &--esolutions
+      margin-left: 20px
     &--blog
       flex-basis: 3%
       margin-right: 2.1%
@@ -115,9 +120,11 @@
         height: 22px
         width: 22px
         top: -2px
-        left: -1px
+        left: 20px
         @include media('<huge')
           left: 3%
+        @include media('<huge')
+          left: -5px
       @include media('<huge')
         padding-left: 30px
         flex-basis: 15%
@@ -164,7 +171,7 @@
       height: 22px
       width: 22px
       top: 1px
-      right: 20px
+      right: 24px
       z-index: 1
     @include media('<huge')
       margin-right: 0
