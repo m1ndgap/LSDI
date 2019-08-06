@@ -11,17 +11,28 @@
     align-items: center
   &__list
     @include resetlist
+    margin: 0 auto
     padding-top: 16px
-    margin-left: 2.5%
-    width: 100%
+    padding-left: 89px
+    width: 40%
     display: flex
-    justify-content: flex-start
+    justify-content: space-between
+    .header-menu__item
+      flex-basis: 20%
+      transition: 300ms
+      border-bottom: 0px solid $blue
+      &:hover
+        border-bottom: 4px solid $blue
     @include media('<huge')
-      margin-left: 1%
+      padding-left: 52px
+    @include media('<large')
+      padding-left: 0px
+      width: 50%
     @include media('<medium')
       display: none
 
-  &__core-items
+
+  //&__core-items
     @include resetlist
     display: flex
     width: 100%
@@ -108,8 +119,9 @@
         display: none
 
     &--phone
+      padding-top: 16px
       position: relative
-      flex-basis: 14%
+      min-width: 139px
       justify-content: flex-end
       margin-left: auto
       &::after
@@ -119,21 +131,19 @@
         background: url('../img/phone_icon.svg') no-repeat
         height: 22px
         width: 22px
-        top: -2px
-        left: 20px
+        top: 11px
+        left: -2px
         @include media('<huge')
-          left: 3%
+          left: -2px
         @include media('<huge')
-          left: -5px
+          left: -2px
       @include media('<huge')
         padding-left: 30px
-        flex-basis: 15%
         justify-content: center
       @include media('<large')
         padding-left: 2%
-        flex-basis: 20%
         margin-left: auto
-        margin-right: 12px
+        margin-right: 32px
       @include media('<medium')
         display: none
     &--firm, &--services, &--ssolutions, &--esolutions
