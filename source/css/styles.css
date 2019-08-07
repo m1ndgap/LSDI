@@ -414,6 +414,8 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center; }
+  .clients__subtitle {
+    margin-top: 52px; }
   .clients__blue-title {
     text-transform: uppercase;
     font-size: 16px;
