@@ -555,7 +555,9 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    padding: 80px 100px 20px; }
+    align-items: flex-start;
+    padding: 80px 100px 20px;
+    min-height: 350px; }
     .clients__tab-content img {
       object-fit: none;
       margin-bottom: 50px; }
